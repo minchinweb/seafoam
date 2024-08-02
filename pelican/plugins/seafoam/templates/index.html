@@ -12,8 +12,8 @@
 {% endblock %}
 
 {% block content %}
-    {% if dates %}
-        {% for article in (dates_page.object_list if dates_page else dates) %}
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
             {% include 'includes/article_listing.html' %}
         {% endfor %}
     {% endif %}

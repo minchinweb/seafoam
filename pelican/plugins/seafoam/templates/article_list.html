@@ -17,9 +17,8 @@
 {% endblock %}
 
 {% block content %}
-    {# "dates" is the article list, sorted by date #}
-    {% if dates %}
-        {% for article in (dates_page.object_list if dates_page else dates) %}
+    {% if articles %}
+        {% for article in (articles_page.object_list if articles_page else articles) %}
             <article>
                 <h2><a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a></h2>
                 {% if DISPLAY_ARTICLE_INFO_ON_INDEX %}
