@@ -434,7 +434,7 @@ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
   Set this to the Google Analytics "property" this site represents. See also
   (and set) ``GOOGLE_ANALYTICS_UNIVERSAL``.
 GOOGLE_ANALYTICS_V4
-  Set this to activate Google Analytics v4.
+  Set this to your "measurement ID" to activate Google Analytics v4. 
 HIDE_SIDEBAR = False
   Hides the sidebar, and all it's contents. Also review the settings
   ``DISPLAY_CATEGORIES_ON_SIDEBAR``, ``DISPLAY_RECENT_POSTS_ON_SIDEBAR``,
