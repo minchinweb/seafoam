@@ -18,7 +18,7 @@ Changelog
 - :feature:`-` add support for fancy tasklists/checkboxes.
 - :bug:`- major` fix last paragraph spacing within lists
 - :feature:`17` Upgrade Font Awesome (icons) from v4 to v6.5.1. Includes a shim
-  for v4 compatibility, so no existing icons in use should need to be rename.
+  for v4 compatibility, so no existing icons in use should need to be renamed.
   It appears that some (all?) of the icons have been re-drawn, so they may
   appear slightly different.
 - :release:`2.9.2 <2024-03-04>`
@@ -80,7 +80,7 @@ Changelog
 - :support:`-` now also requires ``beautifulsoup4`` and ``semantic_version``
 - :bug:`- major` adjust HTML to add the ``.table`` class where needed, rather
   than applying the formatting to all HTML tables. Effectively a re-work of
-  v.2.4.7.
+  v2.4.7.
 - :feature:`-` add internal plugin. This will allow the theme to automatically
   configure and activate itself. Should significantly reduced installation
   complexity. You may be able to completely remove the configuration you have
@@ -138,7 +138,7 @@ Changelog
 - :release:`2.3.0 <2017-11-29>`
 - :feature:`-` add basic support for Tuque Search plugin.
 - :bug:`- major` fix issues with navbar coloring, navbar brand text + logo
-  layout, and sidebar alinement.
+  layout, and sidebar alignment.
 - :feature:`-` added support for `prjct <https://github.com/MinchinWeb/prjct>`_.
 - :release:`2.2.1 <2017-11-13>`
 - :bug:`-` fix reference to ``python-dateutil`` in project metadata

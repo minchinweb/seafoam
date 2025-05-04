@@ -601,8 +601,8 @@ PRJCT_TODO
 PRJCT_VERSION = ''
   *prjct* version displayed in footer. See the ``PRJCT`` setting.
 PYGMENTS_STYLE = 'native'
-  This setting is currently ignored, and my preferred Pygments style is
-  included directly into the Seafoam CSS.
+  This setting is currently ignored, and my preferred Pygments theme (style)
+  (*friendly*) is included directly into the Seafoam CSS.
 RECENT_POST_COUNT = 5
   Number of recent posts to display on the sidebar. See the
   ``DISPLAY_RECENT_POSTS_ON_SIDEBAR`` setting.
@@ -694,7 +694,7 @@ It may also be helpful to review the
 `settings for Pelican itself <http://docs.getpelican.com/en/3.7.1/settings.html>`_.
 
 On articles, the theme also looks for the ``image`` metadata setting to provide
-the "featured image* for the article.
+the *featured image* for the article.
 
 
 Known Issues
