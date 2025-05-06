@@ -2,9 +2,12 @@
     <span class="label label-default">Published</span>
     <span class="published">
         <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}"> 
-            {{ article.date | article_date }}
+            {{ article.date | article_date -}}
             {% if article.micro %}
                 at {{ article.date | datetime("%H:%M") }}
+            {%- elif article.gpx -%}
+                , from {{ article.gpx_start_time | datetime("%H:%M") }}
+                to {{ article.gpx_end_time | datetime ("%H:%M") }}
             {% endif -%}
             </time>
     </span>
@@ -14,7 +17,8 @@
     {#<a href="{{ SITEURL -}} / {{- article.author.url }}"><i class="fa fa-user"></i> {{ article.author }}</a>#}
     {#{% endif -%}-#}
 
-    {%- if not article.micro -%}
+    {%- if article.micro -%}
+    {%- else -%}
         {%- if article.readtime_minutes -%}
             <span class="label label-default">Reading Time</span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;~{{ article.readtime_minutes }}&nbsp;min
         {%- elif article.stats -%}

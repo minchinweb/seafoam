@@ -8,7 +8,8 @@
 
 {% set DISPLAY_IMAGE = false %}
 <article class="row">
-    {% if not article.micro %}
+    {% if article.micro %}
+    {% else %}
         <h{{ HEADING_LEVEL }} class="col-xs-12">
             <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
         </h{{ HEADING_LEVEL }}>
@@ -18,6 +19,14 @@
         <div class="col-xs-4">
             <a href="{{ SITEURL -}} / {{- article.url }}">
                 <img class="featured-image image-process-index-feature" src="{{ SITEURL -}} / {{- article.image|urlencode }}" alt="{{ article.title|striptags }}">
+            </a>
+        </div>
+        <div class="summary entry-content col-xs-8">
+    {% elif article.gpx %}
+        {% set DISPLAY_IMAGE = true %}
+        <div class="col-xs-4">
+            <a href="{{ SITEURL -}} / {{- article.url }}">
+                <img class="featured-image" src="{{ SITEURL -}} / {{- article.gpx_default_image|urlencode }}" alt="{{ article.title|striptags }}">
             </a>
         </div>
         <div class="summary entry-content col-xs-8">
@@ -33,10 +42,12 @@
         <div class="summary entry-content col-xs-12">            
     {% endif -%}
 
-    {% if not article.micro %}
-        {{- article.summary -}}
-    {% else %}
+    {% if article.micro %}
         {{- article.content -}}
+    {% elif article.gpx %}
+        <p>Length: {{ article.gpx_length_km | round(2) }}&nbsp;km</p>
+    {% else %}
+        {{- article.summary -}}
     {% endif %}
 
     </div>

@@ -79,12 +79,15 @@
     <section id="content">
         <article>
             {% if article.image %}
-                <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- article.image|urlencode }}" alt="{{ article.title|striptags }}"/>
+                <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- article.image|urlencode }}" alt="{{ article.title|striptags }}" />
+            {% elif article.gpx %}
+                <img class="featured-image" src="{{ SITEURL -}} / {{- article.gpx_default_image|urlencode }}" alt="{{ article.title|striptags }}" />
             {% elif CATEGORY_IMAGES and article.category in CATEGORY_IMAGES %}
-                <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- CATEGORY_IMAGES[article.category]|urlencode }}" alt="{{ article.category|striptags }}"/>
+                <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- CATEGORY_IMAGES[article.category]|urlencode }}" alt="{{ article.category|striptags }}" />
             {% endif %}
 
-            {% if not article.micro %}
+            {% if article.micro %}
+            {% else %}
             <header class="entry-header">
                 <h1>
                     <a href="{{ SITEURL -}} / {{- article.url }}"
@@ -101,7 +104,11 @@
                         {% include "includes/article_info.html" %}
                     </div>
                 </div>
-                {{ article.content }}
+                {% if article.gpx %}
+                    {# for a GPX "Article", the "content" is the raw GPX file #}
+                {% else %}
+                    {{ article.content }}
+                {% endif %}
             </div>
             <!-- /.entry-content -->
             {% include 'includes/neighbors.html' %}

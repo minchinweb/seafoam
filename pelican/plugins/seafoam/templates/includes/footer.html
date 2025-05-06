@@ -20,6 +20,9 @@
     {% if article.micro %}
         {% set micro_footer = True %}
     {% endif %}
+    {% if article.gpx %}
+        {% set gpx_footer = True %}
+    {% endif %}
 {% endif -%}
 
 {% if page %}
@@ -48,8 +51,15 @@
 {% endif %}
 
 {% if category %}
+    {# TODO: set this dynamically #}
     {% if category == "µ" %}
         {% set micro_footer = True %}
+    {% endif %}
+{% endif %}
+
+{% if category %}
+    {% if category == GPX_CATEGORY %}
+        {% set gpx_footer = True %}
     {% endif %}
 {% endif %}
 
@@ -73,17 +83,23 @@
                     &bull;
                     <a href="{{ PRJCT_FOOTER_URL or 'https://github.com/MinchinWeb/prjct'}}" target="_blank">prjct {{ PRJCT_VERSION  or "" }}</a>
                 {% endif %}
-                {# TODO: Make this optional #}
-                &bull;
-                <a href="{{ SEAFOAM_URL }}" title="seafoam, version {{ SEAFOAM_VERSION }}">
-                    Seafoam
-                </a> theme
                 {% if micro_footer %}
                     &bull;
                     <a href="{{ MICROBLOG_DEV_URL }}" title="minchin.pelican.readers.microblog, version {{ MICROBLOG_VERSION }}">
                         Microblogging
                     </a> plugin
                 {% endif %}
+                {% if gpx_footer %}
+                    &bull;
+                    <a href="{{ GPX_DEV_URL }}" title="minchin.pelican.readers.gpx, version {{ GPX_VERSION }}">
+                        GPX Reader
+                    </a> plugin
+                {% endif %}
+                {# TODO: Make this optional #}
+                &bull;
+                <a href="{{ SEAFOAM_URL }}" title="seafoam, version {{ SEAFOAM_VERSION }}">
+                    Seafoam
+                </a> theme
                 {% if CC_LICENSE or CC_LICENSE_DERIVATIVES or CC_LICENSE_COMMERCIAL %}
                     &bull;
                     {% from 'includes/cc-license.html' import cc_license_mark %}
