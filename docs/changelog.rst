@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`4` add explicit monospaced font (Victor Mono). c.f. [Issue
+  29](https://github.com/minchinweb/seafoam/issues/29).
 - :bug:`16 major` upgrade version of self-hosted fonts. Drop support for
   various old browsers; now requires Chrome 36+, Opera 23+, Firefox 39+, Safari
   12+, or iOS 10+.
