@@ -3,6 +3,9 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`16 major` upgrade version of self-hosted fonts. Drop support for
+  various old browsers; now requires Chrome 36+, Opera 23+, Firefox 39+, Safari
+  12+, or iOS 10+.
 - :release:`2.10.3 <2024-10-01>`
 - :bug:`-` support `microblogging pluging
   <https://blog.minchin.ca/label/microblogging-pelican/>`_ better.
