@@ -167,7 +167,7 @@ def check_settings(pelican):
         pelican.settings["TEMPLATE_PAGES"]["404.html"] = "404.html"
         logging.debug('%s added "404.html" to TEMPLATE_PAGES' % LOG_PREFIX)
 
-    if not "SEAFOAM_PARSER" in pelican.settings.keys():
+    if "SEAFOAM_PARSER" not in pelican.settings.keys():
         if lxml:
             pelican.settings["SEAFOAM_PARSER"] = "lxml"
         else:
@@ -182,7 +182,7 @@ def check_settings(pelican):
             % (LOG_PREFIX, pelican.settings["SEAFOAM_PARSER"])
         )
 
-    if not "SEAFOAM_ENCODING" in pelican.settings.keys():
+    if "SEAFOAM_ENCODING" not in pelican.settings.keys():
         pelican.settings["SEAFOAM_ENCODING"] = "utf-8"
         logging.debug(
             '%s SEAFOAM_ENCODING set to "%s"'
@@ -194,7 +194,7 @@ def check_settings(pelican):
             % (LOG_PREFIX, pelican.settings["SEAFOAM_ENCODING"])
         )
 
-    if not "TAGS_TEXT" in pelican.settings.keys():
+    if "TAGS_TEXT" not in pelican.settings.keys():
         pelican.settings["TAGS_TEXT"] = "Tags"
 
 
