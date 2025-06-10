@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` update Pygments CSS
 - :bug"`-` update LESSC mixin style (for v4.3.0)
 - :release:`2.11.0 <2025-06-07>`
 - :feature:`4` add explicit monospaced font (Victor Mono). c.f. `Issue

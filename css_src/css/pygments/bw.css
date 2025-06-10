@@ -1,7 +1,7 @@
 .highlight pre .hll { background-color: #ffffcc }
 .highlight pre, .highlighttable pre { background: #ffffff; }
 .highlight pre .c { font-style: italic } /* Comment */
-.highlight pre .err { border: 1px solid #FF0000 } /* Error */
+.highlight pre .err { border: 1px solid #F00 } /* Error */
 .highlight pre .k { font-weight: bold } /* Keyword */
 .highlight pre .cm { font-style: italic } /* Comment.Multiline */
 .highlight pre .c1 { font-style: italic } /* Comment.Single */
