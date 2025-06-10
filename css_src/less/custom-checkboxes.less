@@ -79,7 +79,7 @@ span[data-task="🚿"],
 span[data-task="⛪"],
 span[data-task="🦷"] {
     .fa-icon();
-    // .far;  // default to "regular"
+    // .far();  // default to "regular"
     font-family: 'Font Awesome 6 Free';
 
     // fixed width
@@ -89,17 +89,17 @@ span[data-task="🦷"] {
     // color: @sol-grayLight;
 }
 
-//  add  .far;  or  .fas;  to actually apply a font, so the icon shows
+//  add  .far();  or  .fas();  to actually apply a font, so the icon shows
 span[data-task=" "] {
     color: @flat-jeans-dk;
-    .far;
+    .far();
     &:before {
         content: @fa-var-square;
     }
 }
 span[data-task="/"] {
     color: @flat-jeans-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-circle-half-stroke;
     }
@@ -107,7 +107,7 @@ span[data-task="/"] {
 span[data-task="x"],
 span[data-task="X"] {
     color: @flat-jeans-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-square-check;
     }
@@ -115,7 +115,7 @@ span[data-task="X"] {
 
 span[data-task="-"] {
     color: @sol-grayLight;
-    .far;
+    .far();
     &:before {
         content: @fa-var-square-minus;
     }
@@ -123,7 +123,7 @@ span[data-task="-"] {
 span[data-task=">"],
 span[data-task="&gt;"] {
     color: @sol-grayLight;
-    .far;
+    .far();
     &:before {
         content: @fa-var-square-caret-right;
     }
@@ -131,14 +131,14 @@ span[data-task="&gt;"] {
 span[data-task="<"],
 span[data-task="&lt;"] {
     color: @sol-grayLight;
-    .far;
+    .far();
     &:before {
         content: @fa-var-calendar;
     }
 }
 span[data-task="?"] {
     color: @flat-sunflower-dk;
-    .fas;
+    .fas();
     &:before {
         // content: @fa-var-question;
         content: @fa-var-circle-question;
@@ -146,7 +146,7 @@ span[data-task="?"] {
 }
 span[data-task="!"] {
     color: @flat-bittersweet-lt;
-    .fas;
+    .fas();
     &:before {
         // content: @fa-var-exclamation;
         content: @fa-var-triangle-exclamation;
@@ -154,7 +154,7 @@ span[data-task="!"] {
 }
 span[data-task="*"] {
     color: @flat-sunflower-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-star;
     }
@@ -165,7 +165,7 @@ span[data-task='"'],
 span[data-task="Q"],
 span[data-task="&quot;"] {
     color: @flat-aqua-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-quote-left;
     }
@@ -176,21 +176,21 @@ span[data-task="l"],
 span[data-task="L"] {
     // color: @sol-yellow;
     color: @flat-rose-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-location-dot;
     }
 }
 span[data-task="b"] {
     color: @flat-lavender-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-bookmark;
     }
 }
 span[data-task="i"] {
     color: @flat-aqua-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-circle-info;
     }
@@ -199,7 +199,7 @@ span[data-task="i"] {
 // Idea
 span[data-task="I"] {
     color: @flat-sunflower-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-lightbulb;
     }
@@ -207,7 +207,7 @@ span[data-task="I"] {
 span[data-task="p"],
 span[data-task="P"] {
     color: @flat-grass-dk;
-    .far;
+    .far();
     &:before {
         content: @fa-var-thumbs-up;
     }
@@ -216,7 +216,7 @@ span[data-task="P"] {
 span[data-task="c"],
 span[data-task="C"] {
     color: @flat-grapefruit-dk;
-    .far;
+    .far();
     &:before {
         content: @fa-var-thumbs-down;
     }
@@ -225,7 +225,7 @@ span[data-task="C"] {
 // fire
 span[data-task="f"] {
     color: @flat-grapefruit-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-fire;
     }
@@ -234,7 +234,7 @@ span[data-task="f"] {
 // key
 span[data-task="k"] {
     color: @flat-sunflower-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-key;
     }
@@ -243,7 +243,7 @@ span[data-task="k"] {
 // win
 span[data-task="w"] {
     color: @flat-lavender-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-cake-candles;
     }
@@ -252,7 +252,7 @@ span[data-task="w"] {
 // (trending) up
 span[data-task="u"] {
     color: @flat-grass-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-arrow-trend-up;
     }
@@ -261,7 +261,7 @@ span[data-task="u"] {
 // (trending) down
 span[data-task="d"] {
     color: @flat-grapefruit-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-arrow-trend-down;
         // content: @fa-var-spinner;
@@ -272,7 +272,7 @@ span[data-task="d"] {
 span[data-task="n"],
 span[data-task="N"] {
     color: @flat-md-grey-lt;
-    .far;
+    .far();
     &:before {
         content: @fa-var-note-sticky;
     }
@@ -280,7 +280,7 @@ span[data-task="N"] {
 
 span[data-task="@"] {
     color: @flat-aqua-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-person;
     }
@@ -288,14 +288,14 @@ span[data-task="@"] {
 
 span[data-task="D"] {
     color: @flat-md-grey-lt;
-    .far;
+    .far();
     &:before {
         content: @fa-var-calendar-xmark;
     }
 }
 span[data-task="+"] {
     color: @flat-rose-lt;
-    .far;
+    .far();
     &:before {
         content: @fa-var-plus;
     }
@@ -304,7 +304,7 @@ span[data-task="+"] {
 // Research
 span[data-task="R"] {
     color: @flat-md-grey-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-magnifying-glass;
     }
@@ -313,7 +313,7 @@ span[data-task="R"] {
 // Brainstorm
 span[data-task="B"] {
     color: @flat-lavender-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-brain;
     }
@@ -322,7 +322,7 @@ span[data-task="B"] {
 // Example -- pencil in square
 span[data-task="E"] {
     color: inherit;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-check;
     }
@@ -339,14 +339,14 @@ span[data-task="A"] {
 // reward
 span[data-task="r"] {
     color: @flat-sunflower-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-trophy;
     }
 }
 span[data-task="t"] {
     color: @flat-aqua-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-spinner;
     }
@@ -355,14 +355,14 @@ span[data-task="t"] {
 // time
 span[data-task="T"] {
     color: @flat-md-grey-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-stopwatch;
     }
 }
 span[data-task="O"] {
     color: @flat-mint-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-layer-group;
     }
@@ -370,14 +370,14 @@ span[data-task="O"] {
 // conflict -- crossed swords
 span[data-task="~"] {
     color: inherit;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-check;
     }
 }
 span[data-task="W"] {
     color: @flat-grass-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-earth-america;
     }
@@ -386,7 +386,7 @@ span[data-task="W"] {
 // Foreshadow
 span[data-task="F"] {
     color: @sol-grayLight;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-crow;
     }
@@ -395,7 +395,7 @@ span[data-task="F"] {
 // Health / Favorite
 span[data-task="H"] {
     color: @flat-grapefruit-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-heart;
     }
@@ -405,14 +405,14 @@ span[data-task="H"] {
 span[data-task="&"],
 span[data-task="&amp;"] {
     color: @flat-lavender-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-yin-yang;
     }
 }
 span[data-task="s"] {
     color: @flat-sunflower-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-lock;
     }
@@ -421,7 +421,7 @@ span[data-task="s"] {
 // Savings
 span[data-task="S"] {
     color: @flat-sunflower-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-piggy-bank;
     }
@@ -430,7 +430,7 @@ span[data-task="S"] {
 // Shower
 span[data-task="🚿"] {
     color: @flat-aqua-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-bath;
     }
@@ -440,7 +440,7 @@ span[data-task="🚿"] {
 // Church
 span[data-task="⛪"] {
     color: @flat-md-grey-dk;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-church;
     }
@@ -449,7 +449,7 @@ span[data-task="⛪"] {
 // Tooth
 span[data-task="🦷"] {
     color: @flat-lt-grey-lt;
-    .fas;
+    .fas();
     &:before {
         content: @fa-var-tooth;
     }

@@ -37,6 +37,10 @@ def build(ctx):
     if STYLES is None:
         sys.exit("STYLES list is unavailable. Exiting...")
 
+    my_bar = None
+    # if progressbar:
+    #     my_bar = progressbar(maximum = len(STYLES))
+
     for style in STYLES:
         source = p / "css_src" / "less" / f"bootstrap.{style}.less"
         dest = (
