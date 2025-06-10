@@ -64,6 +64,8 @@ EXTRA_REQUIRES = {
         # "pip-tools",
         "minchin.releaser >= 0.8.2",
         # less, installed via npm  # npm install less -g
+        "pygments",
+        # "minchin.text",  # can use vendorized version in minchin.releaser
     ],
     "docs": [
         # 'sphinx >= 1.4',  # theme requires at least 1.4

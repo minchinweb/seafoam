@@ -9,6 +9,16 @@ except ImportError:
     print("[WARN] minchin.releaser not installed.")
 
 try:
+    from minchin.text import progressbar
+except ImportError:
+    try:
+        # minchin.releaser has a vendorized version of minchin.text
+        from minchin.releaser._vendor.text import progressbar
+    except ImportError:
+        progressbar = None
+
+
+try:
     from pelican.plugins.seafoam.constants import STYLES
 except ImportError:
     try:
@@ -56,6 +66,43 @@ def build(ctx):
         print(f'Seafoam LESS for "{style}" compiled to CSS!')
         # TODO -- minimize css!
         #   consider css-html-js-minify
+
+        if my_bar:
+            my_bar.update()
+
+    if my_bar:
+        # clear line
+        print()
+
+
+@task
+def update_pygments(ctx):
+    """Re-generate the Pygments CSS files."""
+
+    try:
+        from pygments.styles import get_all_styles
+    except ImportError:
+        print("[ERROR] Please install pygments")
+        sys.exit(1)
+
+    PYGMENTS_STYLES = list(get_all_styles())
+
+    my_bar = None
+    if progressbar:
+        my_bar = progressbar(maximum = len(PYGMENTS_STYLES))
+
+
+    for style in PYGMENTS_STYLES:
+        clean_style = style.replace("_", "-")
+        my_cmd = f'pygmentize -S {style} -f html -a ".highlight pre" '
+        my_cmd += f"> ./css_src/css/pygments/{clean_style}.css"
+        run(my_cmd)
+        if my_bar:
+            my_bar.update()
+
+    if my_bar:
+        # clear line
+        print()
 
 
 @task
