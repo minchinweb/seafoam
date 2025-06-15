@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`17` update Font Awesome to v6.7.2
 - :bug:`-` update Pygments CSS
 - :bug"`-` update LESSC mixin style (for v4.3.0)
 - :release:`2.11.0 <2025-06-07>`
