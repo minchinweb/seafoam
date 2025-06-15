@@ -12,7 +12,7 @@ This is a test page to make sure "fancy" checkboxes render, the colours look
 good, and that the align well when imbedded in other lists.
 
 Likely requires `minchin.pelican.readers.commonmark` and
-`minchin.md-it.fancy-checkboxes`.
+`minchin.md-it.fancy-tasklists`.
 
 - [ ] `[ ]` to-do (open item)
 - [/] `[/]` incomplete / half-done

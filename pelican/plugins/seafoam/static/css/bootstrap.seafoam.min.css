@@ -17349,6 +17349,10 @@ dd {
     margin: -20px -15px 0 -15px;
     font-family: "Expletus Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
+  ul,
+  ol {
+    padding-left: 30px;
+  }
 }
 /* More Sidebar Nav
 // -------------------------
@@ -19457,7 +19461,7 @@ li.task-list-item li {
   text-indent: 0;
 }
 li.task-list-item li.task-list-item {
-  text-indent: inherit;
+  text-indent: -27px;
 }
 span[data-task='"'],
 span[data-task="&quot;"],
@@ -20239,7 +20243,7 @@ span[data-task="🏠"] {
   font-weight: 900;
 }
 span[data-task="🏠"]:before {
-  content: "\f015";
+  content: "\e3af";
 }
 span[data-task="📺"] {
   color: #ffce54;
