@@ -1,7 +1,7 @@
 ---
 title: Checkbox Test
 date: 2024-01-31 21:42:00-0700
-modified: 2024-04-07 14:56:00-0600
+modified: 2025-06-14 18:57:15-0600
 tags:
     - test
     - markdown
@@ -44,6 +44,7 @@ Likely requires `minchin.pelican.readers.commonmark` and
 - [N] `[N]` (big) note
 - [@] `[@]` delegated / ongoing / character / person
 - [D] `[D]` date
+- [o] `[o]` event (BuJo)
 - [+] `[+]` add
 - [R] `[R]` research
 - [B] `[B]` brainstorm
@@ -60,9 +61,24 @@ Likely requires `minchin.pelican.readers.commonmark` and
 - [H] `[H]` favorite / health
 - [&] `[&]` symbolism
 - [s] `[s]` secret
+- [e] `[e]` energy
 - [🚿] `[🚿]` shower
 - [🦷] `[🦷]` tooth / dental
 - [⛪] `[⛪]` church
+- [📕] `[📕]` Book
+- [🏠] `[🏠]` House
+- [📺] `[📺]` TV (Show)
+- [📽️] `[📽️]` Film / Movie -- **UTF-16**, not working
+- [🎥] `[🎥]` Film / Movie
+- [🎬] `[🎬]` Film / Movie
+- [📽] `[📽]` Film / Movie
+- [🎞] `[🎞]` Film / Movie
+- [🎦] `[🎦]` Film / Movie
+- [🚶‍♀️] `[🚶‍♀️]` Walking -- **UTF-16**, not working
+- [🚶‍♂️] `[🚶‍♂️]` Walking -- **UTF-16**, not working
+- [🏊‍♀️] `[🏊‍♀️]` Swimming -- **UTF-16**, not working
+- [🏊‍♂️] `[🏊‍♂️]` Swimming -- **UTF-16**, not working
+- [🎲] `[🎲]` Dice / Play
 
 ---
 

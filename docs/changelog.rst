@@ -3,6 +3,9 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` additional CSS to add indicators added by *fancy tasklists*
+  v1.2.0 (``e`` (energy), ``o`` (event), 📕 (book), 🏠 (house), 📺 (TV (show)),
+  🎥 / 🎬 / 📽 / 🎞 / 🎦 (film / movie), and 🎲 (dice / play)).
 - :feature:`17` update Font Awesome to v6.7.2
 - :bug:`-` update Pygments CSS
 - :bug"`-` update LESSC mixin style (for v4.3.0)

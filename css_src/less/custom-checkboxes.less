@@ -49,6 +49,7 @@ span[data-task="c"],
 span[data-task="C"],
 span[data-task="d"],
 span[data-task="D"],
+span[data-task="e"],
 span[data-task="E"],
 span[data-task="f"],
 span[data-task="F"],
@@ -60,6 +61,7 @@ span[data-task="l"],
 span[data-task="L"],
 span[data-task="n"],
 span[data-task="N"],
+span[data-task="o"],
 span[data-task="O"],
 span[data-task="p"],
 span[data-task="P"],
@@ -77,7 +79,20 @@ span[data-task="x"],
 span[data-task="X"],
 span[data-task="🚿"],
 span[data-task="⛪"],
-span[data-task="🦷"] {
+span[data-task="🦷"],
+span[data-task="📕"],
+span[data-task="🏠"],
+span[data-task="📺"],
+span[data-task="📽️"],
+span[data-task="🎥"],
+span[data-task="🎬"],
+span[data-task="📽"],
+span[data-task="🎞"],
+span[data-task="🎦"],
+span[data-task="🚶‍♀️"],
+span[data-task="🚶‍♂️"],
+span[data-task="🏊‍♀️"],
+span[data-task="🏊‍♂️"] {
     .fa-icon();
     // .far();  // default to "regular"
     font-family: 'Font Awesome 6 Free';
@@ -286,7 +301,8 @@ span[data-task="@"] {
     }
 }
 
-span[data-task="D"] {
+span[data-task="D"],
+span[data-task="o"] {
     color: @flat-md-grey-lt;
     .far();
     &:before {
@@ -427,6 +443,15 @@ span[data-task="S"] {
     }
 }
 
+// Energy / Lightning bolt
+span[data-task="e"] {
+    color: @flat-sunflower-lt;
+    .fas();
+    &:before {
+        content: @fa-var-bolt;
+    }
+}
+
 // Shower
 span[data-task="🚿"] {
     color: @flat-aqua-lt;
@@ -455,3 +480,73 @@ span[data-task="🦷"] {
     }
 }
 
+// Book
+span[data-task="📕"] {
+    color: @flat-grapefruit-dk;
+    .fas();
+    &:before {
+        content: @fa-var-book-bookmark;
+    }
+}
+
+// House
+span[data-task="🏠"] {
+    color: @flat-lavender-dk;
+    .fas();
+    &:before {
+        content: @fa-var-house;
+    }
+}
+
+// TV (Show)
+span[data-task="📺"] {
+    color: @flat-sunflower-lt;
+    .fas();
+    &:before {
+        content: @fa-var-tv;
+    }
+}
+
+// Film / Movie
+span[data-task="📽️"],  //  UTF-16, not working
+span[data-task="🎥"],
+span[data-task="🎬"],
+span[data-task="📽"],
+span[data-task="🎞"],
+span[data-task="🎦"] {
+    color: @flat-sunflower-dk;
+    .fas();
+    &:before {
+        // movie camera is only available on Pro...
+        content: @fa-var-film;
+    }
+}
+
+// Walking
+span[data-task="🚶‍♀️"],   //  UTF-16, not working
+span[data-task="🚶‍♂️"] {  //  UTF-16, not working
+    color: @flat-aqua-lt;
+    .fas();
+    &:before {
+        content: @fa-var-person-walking;
+    }
+}
+
+// Swimming
+span[data-task="🏊‍♀️"],   //  UTF-16, not working
+span[data-task="🏊‍♂️"] {  //  UTF-16, not working
+    color: @flat-aqua-lt;
+    .fas();
+    &:before {
+        content: @fa-var-person-swimming;
+    }
+}
+
+// Dice / Play
+span[data-task="🎲"] {
+    color: @flat-lt-grey-dk;
+    .fas();
+    &:before {
+        content: @fa-var-dice;
+    }
+}
