@@ -3,12 +3,13 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.12.0 <2025-06-14>`
 - :feature:`-` additional CSS to add indicators added by *fancy tasklists*
   v1.2.0 (``e`` (energy), ``o`` (event), 📕 (book), 🏠 (house), 📺 (TV (show)),
   🎥 / 🎬 / 📽 / 🎞 / 🎦 (film / movie), and 🎲 (dice / play)).
 - :feature:`17` update Font Awesome to v6.7.2
-- :bug:`-` update Pygments CSS
-- :bug"`-` update LESSC mixin style (for v4.3.0)
+- :bug:`- major` update Pygments CSS
+- :bug"`- major` update LESSC mixin style (for v4.3.0)
 - :release:`2.11.0 <2025-06-07>`
 - :feature:`4` add explicit monospaced font (Victor Mono). c.f. `Issue
   29 <https://github.com/minchinweb/seafoam/issues/29>`_` re style sets.

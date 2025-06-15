@@ -62,7 +62,7 @@ EXTRA_REQUIRES = {
     ],
     "build": [
         # "pip-tools",
-        "minchin.releaser >= 0.8.2",
+        "minchin.releaser >= 0.9.5",
         # less, installed via npm  # npm install less -g
         "pygments",
         # "minchin.text",  # can use vendorized version in minchin.releaser
