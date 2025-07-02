@@ -129,6 +129,8 @@ listed in this section are required.
   <https://github.com/MinchinWeb/minchin.md-it.fancy-tasklists>`_ -- this
   extends the (CommonMark) Markdown checkboxes to display a number of icons
   instead.
+- `GPX Reader <https://github.com/minchinweb/minchin.pelican.readers.gpx>_` --
+  turns GPX tracks into maps of the travels and displays some statistics.
 
 It also replaces the functions of the following:
 
@@ -197,6 +199,8 @@ Fancy Checkboxes / Tasklist (with `CommonMark reader
     :alt: Fancy Tasklists (in CommonMark)
 
 .. add microblog post image
+
+.. add GPX post image
 
 .. add Strathcona theme image
 
@@ -563,6 +567,9 @@ GPX_DEV_URL
   use.
 GPX_VERSION
   The version of the GPX Reader plugin. Provided by the plugin, when in use.
+GPX_GENERATED
+  Set by the *GPX Reader* plugin, and then used to display the generated GPX
+  maps on archive period pages. 
 HIDE_SIDEBAR = False
   Hides the sidebar, and all it's contents. Also review the settings
   ``DISPLAY_CATEGORIES_ON_SIDEBAR``, ``DISPLAY_RECENT_POSTS_ON_SIDEBAR``,
