@@ -25,6 +25,10 @@
             <span class="label label-default">Reading Time</span>&nbsp;<i class="fa fa-clock-o"></i>&nbsp;~{{ article.stats['read_mins'] }}&nbsp;min
         {%- endif -%}
     {%- endif -%}
+    
+    {% if article.gpx -%}
+        <span class="label label-default">Travelled</span>&nbsp;<i class="fa-solid fa-route"></i>&nbsp;{{ "{:0,.1f}".format(article.gpx_length_km) }}&nbsp;km
+    {%- endif -%}
 
     {#- Uncomment if you want to show Categories#}
     {#<span class="label label-default">Category</span>#}
