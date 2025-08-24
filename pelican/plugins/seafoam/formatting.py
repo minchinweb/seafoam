@@ -13,6 +13,12 @@ def table_fix(path, context):
     Apply the ".table" class to all HTML tables within generated articles.
 
     This is so the Bootstrap CSS works as expected.
+
+    Note that BeautifulSoup's roundtripping (parsing and re-writing) is not
+    "pixel perfect" and may change the final HTML. In particular, the `lxml`
+    and `html5lib` parser will add the `<html>` and `<body>` if they are
+    missing. Here, we are dealing with the entire HTML document, so that
+    particular change, if it happens, shouldn't be an issue.
     """
     REWRITE = False
 
