@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.12.1 <2025-08-24>`
+- :bug:`-` review deep list indentation
 - :release:`2.12.0 <2025-06-14>`
 - :feature:`-` additional CSS to add indicators added by *fancy tasklists*
   v1.2.0 (``e`` (energy), ``o`` (event), 📕 (book), 🏠 (house), 📺 (TV (show)),

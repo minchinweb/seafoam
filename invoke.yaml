@@ -22,6 +22,7 @@ releaser:
             - wheel
         pypi:
             - lxml
+            - pelican
             - pillow
             - python-dateutil
             - rich
