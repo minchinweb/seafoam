@@ -9,11 +9,13 @@
 {% set DISPLAY_IMAGE = false %}
 <article class="row">
     {% if article.micro %}
+    {% elif article.tasknote %}
     {% else %}
         <h{{ HEADING_LEVEL }} class="col-xs-12">
             <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
         </h{{ HEADING_LEVEL }}>
     {% endif %}
+
     {% if article.image %}
         {% set DISPLAY_IMAGE = true %}
         <div class="col-xs-4">
@@ -46,6 +48,8 @@
         {{- article.content -}}
     {% elif article.gpx %}
         <p>Length: {{ article.gpx_length_km | round(2) }}&nbsp;km</p>
+    {% elif article.tasknote %}
+        {{- article.summary -}}
     {% else %}
         {{- article.summary -}}
     {% endif %}
@@ -70,7 +74,11 @@
                 {% include 'includes/comment_count.html' %}
             {% endif -%}
             {# only display the 'read more' link if there is more to the article #}
-            {% if article.has_summary != false and not article.micro %} 
+            {% if article.tasknote and article.content | length <= 7 %}
+                &bull;&nbsp;<span class="label label-primary">
+                    <a href="{{ SITEURL -}} / {{- article.url }}"><i class="fa fa-link"></i>&nbsp;permalink</a>
+                </span>
+            {% elif article.has_summary != false and not article.micro %} 
                 &bull;&nbsp;<span class="label label-primary">
                     <a href="{{ SITEURL -}} / {{- article.url }}">read more&nbsp;<i class="fa fa-arrow-circle-right"></i>&nbsp;</a>
                 </span>

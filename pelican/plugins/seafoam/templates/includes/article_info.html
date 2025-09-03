@@ -8,6 +8,8 @@
             {%- elif article.gpx -%}
                 , from {{ article.gpx_start_time | datetime("%H:%M") }}
                 to {{ article.gpx_end_time | datetime ("%H:%M") }}
+            {% elif article.tasknote %}
+                at {{ article.date | datetime("%H:%M") }}
             {% endif -%}
             </time>
     </span>

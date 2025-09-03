@@ -92,14 +92,19 @@
                         {%- endif -%}
                     </div>
                     <div class="archives-title col-xs-7 col-md-6">
-                        {% if not article.micro %}
-                            <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
-                            {% if article.subtitle %}<br />{{ article.subtitle }}{% endif %}
-                        {% else %}
+                        {% if article.micro %}
                             {{ article.content }}
                             {# &bull;&nbsp;<span class="label label-primary">
                                 <a href="{{ SITEURL -}} / {{- article.url }}"><i class="fa fa-link"></i></a>
                             </span> #}
+                        {% elif article.tasknote %}
+                            {{ article.tasknote_checkbox }} {{ article.title }}
+                            &nbsp;<span class="label label-primary">
+                                <a href="{{ SITEURL -}} / {{- article.url }}" title="read more"><i class="fa fa-arrow-circle-right"></i>&nbsp;</a>
+                            </span>
+                        {% else %}
+                            <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
+                            {% if article.subtitle %}<br />{{ article.subtitle }}{% endif %}
                         {% endif %}
                     </div>
                 </div>

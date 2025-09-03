@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` support for *TaskNotes* (``minchin.pelican.readers.tasknotes``)
+  plugin for Pelican.
 - :release:`2.12.1 <2025-08-24>`
 - :bug:`-` review deep list indentation
 - :release:`2.12.0 <2025-06-14>`

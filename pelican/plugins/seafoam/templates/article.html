@@ -53,7 +53,7 @@
 #}
 
 {% block canonical_rel %}
-<link rel="canonical" href="{{ SITEURL -}} / {{- article.url }}">
+    <link rel="canonical" href="{{ SITEURL -}} / {{- article.url }}">
 {% endblock %}
 
 {% block breadcrumbs %}
@@ -87,6 +87,12 @@
             {% endif %}
 
             {% if article.micro %}
+            {% elif article.tasknote %}
+            <header class="entry-header">
+                <p>
+                    {{ article.summary }}
+                </p>
+            </header>
             {% else %}
             <header class="entry-header">
                 <h1>
@@ -96,25 +102,31 @@
                         {{ article.title|replace('&nbsp;', ' ') }}
                     </a>
                 </h1>
-            </header>
+            </header>  <!-- /.entry-header -->
             {% endif %}
+
             <div class="entry-content">
-                <div class="panel">
-                    <div class="panel-body">
-                        {% include "includes/article_info.html" %}
+                {% if article.tasknote %}
+                    {# pass #}
+                    <!-- no "article_info" panel for tasknotes -->
+                {% else %}
+                    <div class="panel">
+                        <div class="panel-body">
+                            {% include "includes/article_info.html" %}
+                        </div>
                     </div>
-                </div>
+                {% endif %}
+    
                 {% if article.gpx %}
                     {# for a GPX "Article", the "content" is the raw GPX file #}
                 {% else %}
                     {{ article.content }}
                 {% endif %}
-            </div>
-            <!-- /.entry-content -->
+            </div>  <!-- /.entry-content -->
             {% include 'includes/neighbors.html' %}
             {% include 'includes/related-posts.html' %}
             {% include 'includes/addthis.html' %}
             {% include 'includes/comments.html' %}
         </article>
-    </section>
+    </section>  <!-- /#content -->
 {% endblock %}

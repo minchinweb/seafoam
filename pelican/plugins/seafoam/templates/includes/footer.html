@@ -23,6 +23,9 @@
     {% if article.gpx %}
         {% set gpx_footer = True %}
     {% endif %}
+    {% if article.tasknote %}
+        {% set tasknotes_footer = True %}
+    {% endif %}
 {% endif -%}
 
 {% if page %}
@@ -81,7 +84,7 @@
                 {% endif %}
                 {% if PRJCT %}
                     &bull;
-                    <a href="{{ PRJCT_FOOTER_URL or 'https://github.com/MinchinWeb/prjct'}}" target="_blank">prjct {{ PRJCT_VERSION  or "" }}</a>
+                    <a href="{{ PRJCT_FOOTER_URL or 'https://github.com/MinchinWeb/prjct' }}" target="_blank">prjct {{ PRJCT_VERSION  or "" }}</a>
                 {% endif %}
                 {% if micro_footer %}
                     &bull;
@@ -93,6 +96,12 @@
                     &bull;
                     <a href="{{ GPX_DEV_URL }}" title="minchin.pelican.readers.gpx, version {{ GPX_VERSION }}">
                         GPX Reader
+                    </a> plugin
+                {% endif %}
+                {% if tasknotes_footer %}
+                    &bull;
+                    <a href="{{ TASKNOTES_DEV_URL }}" title="minchin.pelican.readers.tasknotes, version {{ TASKNOTES_VERSION }}">
+                        Tasknotes
                     </a> plugin
                 {% endif %}
                 {# TODO: Make this optional #}
