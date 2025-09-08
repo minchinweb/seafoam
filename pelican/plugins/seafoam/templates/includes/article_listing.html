@@ -9,11 +9,19 @@
 {% set DISPLAY_IMAGE = false %}
 <article class="row">
     {% if article.micro %}
+        {# pass #}
     {% elif article.tasknote %}
+        {# pass #}
     {% else %}
         <h{{ HEADING_LEVEL }} class="col-xs-12">
             <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
         </h{{ HEADING_LEVEL }}>
+
+        {% if article.subtitle %}
+            <p class="article-subtitle">
+                {{ article.subtitle }}
+            </p>
+        {% endif %}
     {% endif %}
 
     {% if article.image %}

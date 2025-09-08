@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`40` display ``subtitle`` on Article pages.
 - :feature:`-` support for *TaskNotes* (``minchin.pelican.readers.tasknotes``)
   plugin for Pelican.
 - :release:`2.12.1 <2025-08-24>`

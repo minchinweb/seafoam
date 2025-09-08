@@ -20462,10 +20462,20 @@ figure.floatcenter,
   white-space: inherit;
   border-radius: inherit;
 }
-.categories-timestamp {
+.categories-timestamp,
+.archives-subtitle {
   color: #AAAAAA;
   font-size: 0.9em;
   margin-right: 10px;
+}
+.archives-subtitle {
+  padding-left: 2em;
+}
+.article-subtitle {
+  font-size: 31px;
+  font-family: "Expletus Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #AAAAAA;
+  padding-left: 2em;
 }
 /*! Pygments, 'friendly' theme */
 .highlight pre .hll {

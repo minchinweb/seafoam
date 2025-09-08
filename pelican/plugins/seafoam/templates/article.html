@@ -87,6 +87,7 @@
             {% endif %}
 
             {% if article.micro %}
+                {# pass #}
             {% elif article.tasknote %}
             <header class="entry-header">
                 <p>
@@ -102,6 +103,12 @@
                         {{ article.title|replace('&nbsp;', ' ') }}
                     </a>
                 </h1>
+
+                {% if article.subtitle %}
+                    <p class="article-subtitle">
+                        {{ article.subtitle }}
+                    </p>
+                {% endif %}
             </header>  <!-- /.entry-header -->
             {% endif %}
 

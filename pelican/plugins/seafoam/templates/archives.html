@@ -104,7 +104,12 @@
                             </span>
                         {% else %}
                             <a href="{{ SITEURL -}} / {{- article.url }}">{{ article.title }}</a>
-                            {% if article.subtitle %}<br />{{ article.subtitle }}{% endif %}
+                            {% if article.subtitle %}
+                                <br />
+                                <span class="archives-subtitle">
+                                    {{ article.subtitle }}
+                                </span>
+                            {% endif %}
                         {% endif %}
                     </div>
                 </div>
