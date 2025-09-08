@@ -21,6 +21,7 @@ releaser:
             - setuptools
             - wheel
         pypi:
+            - beautifulsoup4
             - lxml
             - pelican
             - pillow
