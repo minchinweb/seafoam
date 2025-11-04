@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.13.1 <2025-11-03>`
 - :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
   installed.
 - :bug:`42` don't break on valid PEP440 versions (e.g. ``4.11.0.post0``). See

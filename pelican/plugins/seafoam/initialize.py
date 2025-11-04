@@ -1,7 +1,6 @@
 import logging
 
 from packaging.specifiers import SpecifierSet
-
 from packaging.version import Version
 
 from pelican import __version__ as pelican_version

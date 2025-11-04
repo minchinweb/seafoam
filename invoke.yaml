@@ -17,13 +17,12 @@ releaser:
             - soupsieve
             - pelican-image-process
             - pelican-jinja-filters
-            - semantic-version
             - setuptools
             - wheel
         pypi:
-            - beautifulsoup4
-            - lxml
-            - pelican
-            - pillow
-            - python-dateutil
-            - rich
+            # - beautifulsoup4
+            # - lxml
+            # - pelican
+            # - pillow
+            # - python-dateutil
+            # - rich
