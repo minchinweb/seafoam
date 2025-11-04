@@ -349,13 +349,16 @@ CUSTOM_JS_LIST_HEAD = []
   
   See also ``CUSTOM_JS_LIST`` and ``JQUERY_JS_IN_HEAD``.
 DEFAULT_LANG
-  .
+  Used by Disqus to set the default display language.
 DISPLAY_ARCHIVES_ON_MENU = True
   Include archives on the main site menu.
 DISPLAY_BREADCRUMBS = False
   Display Breadcrumbs on site.
 
   See also ``MENUITEMS_2_AT`` and ``MENUITEMS_2_AT_LINK`` settings.
+DISPLAY_ARTICLE_INFO_ON_INDEX
+  Display the "article info" box (ususally found on the article pages) on the
+  "Articles" listing page as well. (*Unconfirmed if working*)
 DISPLAY_CATEGORIES_ON_MENU
   Include categories on the main site menu.
 DISPLAY_CATEGORIES_ON_SIDEBAR
@@ -395,6 +398,8 @@ DISQUS_SITENAME
   You will probably only use this or the Pelican Comment System; odd results
   may come if you try to use both together. See the ``PELICAN_COMMENT_SYSTEM``
   setting.
+
+  See also ``DEFAULT_LANG``.
 DOCUTIL_CSS
   If you're using reStructuredText for writing articles and pages, you can
   include the extra CSS styles that are used by the docutils-generated HTML by
@@ -504,8 +509,8 @@ NAVBAR_ON_TOP = False
   vertical on the left side of the page. Default is False.
 NEIGHBORS
   Activates the links to the next and previous articles, both in the "all
-  posts" index and the category-specific index. Requires the
-  `neighbors <https://pypi.python.org/pypi/pelican-neighbors>`_ to be both
+  posts" index and the category-specific index. Requires the `neighbors
+  <https://pypi.python.org/pypi/pelican-neighbors>`_ plugin to be both
   installed and activated (i.e. listed under ``PLUGINS``).
 OPEN_GRAPH_FB_APP_ID
   You can use this setting to provide a Facebook *app id*. See the
@@ -520,17 +525,26 @@ PAGINATOR_LIMIT = 8
   representing the current page, links to the next three pages, and a link
   to the last page.
 PDF_PROCESSOR
-  .
+  If set, provides links to a PDF version of the page or article at
+  ``<SITEURL>/pdf/<page.slug>.pdf``. The actual PDF files will need to be
+  generated outside of *seafoam*.
 PELICAN_COMMENT_SYSTEM = False
-  Set this to ``True`` to active the
-  `pelican_comment_system <https://bernhard.scheirle.de/posts/2014/March/29/static-comments-via-email/>`_.
+  Set this to ``True`` to active the `Static Comments
+  <https://blog.minchin.ca/2022/04/static-comments-211-released.html>`_ plugin
+  (``minchin.pelican.plugins.static-comments``).
 
-  The Pelican Comment System has
-  `further settings <https://github.com/Scheirle/pelican_comment_system/blob/master/doc/installation.md>`_
+  The Static Comments plugin has
+  `further settings <https://github.com/minchinweb/minchin.pelican.plugins.static_comments/blob/master/docs/installation.md>`_
   that are not used directly by the theme.
 
   You will probably only use this or Disqus; odd results may come if you try to
   use both together. See also the ``DISQUS_SITENAME`` setting.
+
+  See also ``PELICAN_COMMENT_SYSTEM_DISPLAY_COUNTS``,
+  ``PELICAN_COMMENT_SYSTEM_EMAIL_DOMAIN``,
+  ``PELICAN_COMMENT_SYSTEM_EMAIL_USER``, ``PELICAN_COMMENT_SYSTEM_FEED``,
+  ``PELICAN_COMMENT_SYSTEM_FEED_ALL``, and
+  ``PELICAN_COMMENT_SYSTEM_IDENTICON_SIZE``.
 PELICAN_COMMENT_SYSTEM_DISPLAY_COUNTS = True
   Whether to display the number of comments
 PELICAN_COMMENT_SYSTEM_EMAIL_DOMAIN
@@ -580,6 +594,10 @@ PRJCT
     PRJCT_FOOTER_URL = prjct.__url__
 
   Also add prjct to our direct templates list.
+
+  See also ``PRJCT_ACTIVE_PROJECTS``, ``PRJCT_COMPLETED_PROJECTS``,
+  ``PRJCT_DESC``, ``PRJCT_DONE``, ``PRJCT_FOOTER_URL``,
+  ``PRJCT_SOMEDAY_PROJECTS``, ``PRJCT_TODO``, and ``PRJCT_VERSION``.
 PRJCT_ACTIVE_PROJECTS
   A list of *active* projects. Used to sort projects on the main prjct page.
   See the ``PRJCT`` setting.
@@ -615,8 +633,8 @@ RECENT_POST_COUNT = 5
   Number of recent posts to display on the sidebar. See the
   ``DISPLAY_RECENT_POSTS_ON_SIDEBAR`` setting.
 RELATED_POSTS_TEXT = 'Related Posts:'
-  Header for related posts listing. Requires that the
-  `Related Posts Plugin <https://github.com/getpelican/pelican-plugins/tree/master/related_posts>`_
+  Header for related posts listing. Requires that the `Related Posts Plugin
+  <https://github.com/getpelican/pelican-plugins/tree/master/related_posts>`_
   be active.
 SEAFOAM_DEV_MODE = False
   Enable this to speed local development by (effectively) disabling the *Image
@@ -631,14 +649,18 @@ SEAFOAM_PARSER = "html.parser"
   This is the parser that Beautiful Soup uses when run by the internal plugin.
 SEAFOAM_URL = "http://blog.minchin.ca/label/seafoam/"
   The project url of the theme (automatically provided by the bundled plugin).
-SEAFOAM_VERSION = pelican.plugins.seafoam.__version__
+SEAFOAM_VERSION = ``pelican.plugins.seafoam.__version__``
   The version of the theme (automatically provided by the bundled plugin).
 SITELOGO
   Link to the site logo (displayed in the navbar). This is relative to the
   SITEURL.
+
+  See also ``SITELOGO_SIZE``.
 SITELOGO_SIZE
   The width of the site logo in the navbar. Can be set to any valid CSS value
   (i.e. %, em, px, etc). I have had good luck setting this to ``100%``.
+
+  See also ``SITELOGO``.
 SITENAME
   The name of your site, displayed in the navbar.
 SITEURL
@@ -658,10 +680,10 @@ TAGS_TEXT = "Tags"
   but assumes to be under a single (or no) category. Assumed to be plural.
 TAGS_URL
   Same as the Pelican setting.
-TEMPLATE_PAGES = {"404.html": "404.html",}
+TEMPLATE_PAGES = { "404.html": "404.html", }
   Same as the Pelican setting. Automatically set by the internal plugin to
   enable a 404 error page on GitHub pages (and perhaps elsewhere).
-THEME = pelican.plugins.seafoam.get_path()
+THEME = ``pelican.plugins.seafoam.get_path()``
   Same as the Pelican setting. Automatically set by the internal plugin.
 THEME_STATIC_DIR
   Same as the Pelican setting.
@@ -698,8 +720,8 @@ USE_OPEN_GRAPH = True
   See also ``OPEN_GRAPH_FB_APP_ID``, and ``OPEN_GRAPH_FB_APP_ID``
   settings.
 
-It may also be helpful to review the
-`settings for Pelican itself <http://docs.getpelican.com/en/3.7.1/settings.html>`_.
+It may also be helpful to review the `settings for Pelican itself
+<https://docs.getpelican.com/en/stable/settings.html>`_.
 
 On articles, the theme also looks for the ``image`` metadata setting to provide
 the *featured image* for the article.
