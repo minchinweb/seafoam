@@ -707,6 +707,8 @@ the *featured image* for the article.
 Known Issues
 ------------
 
+- versions before v2.13.1 break on Pelican v4.11.0.post0. Upgrade *seafoam* to
+  solve this.
 - activating both Typogrify and the Pelican Comment System on Pelican 3.6
   causes issues. This issue has been fixed in Pelican 3.7.
 - minification (specifically,
