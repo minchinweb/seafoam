@@ -19,14 +19,13 @@ Changelog
 - :bug:`- major` update Pygments CSS
 - :bug"`- major` update LESSC mixin style (for v4.3.0)
 - :release:`2.11.0 <2025-06-07>`
-- :feature:`4` add explicit monospaced font (Victor Mono). c.f. `Issue
-  29 <https://github.com/minchinweb/seafoam/issues/29>`_` re style sets.
+- :feature:`4` add explicit monospaced font (Victor Mono). c.f. `Issue #29`_
+  re style sets.
 - :bug:`16 major` upgrade version of self-hosted fonts. Drop support for
   various old browsers; now requires Chrome 36+, Opera 23+, Firefox 39+, Safari
   12+, or iOS 10+.
 - :release:`2.10.3 <2024-10-01>`
-- :bug:`-` support `microblogging pluging
-  <https://blog.minchin.ca/label/microblogging-pelican/>`_ better.
+- :bug:`-` support `microblogging plugin`_ better.
   Specifically, allow the plugin to control post sort order and hide appended
   tags on the index page. Requires v1.3.0 or newer of the plugin.
 - :release:`2.10.2 <2024-04-07>`
@@ -53,14 +52,11 @@ Changelog
 - :bug:`-` better display of micropost links
 - :release:`2.9.0 <2023-07-14>`
 - :feature:`-` add support for *microblogging*, through my `microblogging
-  plugin <https://blog.minchin.ca/label/microblogging-pelican/>`_.
-  c.f. `blog.minchin.ca Issue #105
-  <https://github.com/MinchinWeb/blog.minchin.ca/issues/105>`_.
+  plugin`_. c.f. `blog.minchin.ca Issue #105`_.
 - :bug:`- major` no longer capitalize category names, when displayed on
   sidebar. This is part of the changes to support microblogging.
 - :bug:`- major` review ``og`` meta tags, particularly for featured images.
-  c.f. `blog.minchin.ca Issue #104
-  <https://github.com/MinchinWeb/blog.minchin.ca/issues/104>`_.
+  c.f. `blog.minchin.ca Issue #104`_.
 - :release:`2.8.1 <2023-06-11>`
 - :bug:`-` fix link to font files
 - :release:`2.8.0 <2023-06-11>`
@@ -91,8 +87,7 @@ Changelog
 - :bug:`- major` have ``SEAFOAM_URL`` return the project URL.
 - :feature:`-` add ``SEAFOAM_DEV_MODE`` to turn off the *image process* plugin.
 - :release:`2.6.0 <2021-07-05>`
-- :support:`1` add screenshots. Also `issue #18
-  <https://github.com/MinchinWeb/seafoam/issues/18>`_.
+- :support:`1` add screenshots. Also `Issue #18`_.
 - :feature:`-` include *seafoam* version in source HTML of generated sites
 - :support:`-` updated ``setup.py``. Include tempalate and static files at new
   location.
@@ -160,7 +155,7 @@ Changelog
 - :feature:`-` add basic support for Tuque Search plugin.
 - :bug:`- major` fix issues with navbar coloring, navbar brand text + logo
   layout, and sidebar alignment.
-- :feature:`-` added support for `prjct <https://github.com/MinchinWeb/prjct>`_.
+- :feature:`-` added support for `prjct`_.
 - :release:`2.2.1 <2017-11-13>`
 - :bug:`-` fix reference to ``python-dateutil`` in project metadata
 - :release:`2.2.0 <2017-11-13>`
@@ -173,7 +168,8 @@ Changelog
 - :release:`2.1.5 <2017-05-31>`
 - :bug:`11` indent definition list items
 - :bug:`-` note that Image Processing v1.1.2 is broken (see their
-  [issue 2](https://github.com/MinchinWeb/minchin.pelican.plugins.image_process/issues/2))
+  `Issue #2
+  <https://github.com/MinchinWeb/minchin.pelican.plugins.image_process/issues/2>`_)
 - :release:`2.1.4 <2017-04-09>`
 - :bug:`-` ``Framework :: Pelican :: Themes`` trove classifier on PyPI now
   available.
@@ -182,19 +178,17 @@ Changelog
 - :release:`2.1.2 <2017-03-08>`
 - :bug:`-` provide universal wheels. On versions of Python before 3.4 (when the
   ``pathlib`` module was added to the standard library), we now depend on
-  `pathlib2 <https://pypi.python.org/pypi/pathlib2>`_.
+  `pathlib2`_.
 - :bug:`-` provide an absolute path.
 - :release:`2.1.1 <2017-03-08>`
-- :bug:`-` fix pagination links on category and tag pages. See `this issue
-  <https://github.com/MinchinWeb/blog.minchin.ca/issues/6>`_.
+- :bug:`-` fix pagination links on category and tag pages. See
+  `blog.minchin.ca Issue #6`_.
 - :bug:`13` remove unused code in pagination template. Thanks
-  `@jorgesumle <https://github.com/jorgesumle>`_!
+  `@jorgesumle`_!
 - :release:`2.1.0 <2017-02-20>`
-- :feature:`-` add support for
-  `readtime <https://pypi.python.org/pypi/pelican-readtime>` plugin in
-  preference to the ``post-stats`` plugin to get article reading time. The
-  former is available on PyPI (as ``pelican-readtime``), while the latter is
-  not.
+- :feature:`-` add support for `readtime`_ plugin in preference to the
+  ``post-stats`` plugin to get article reading time. The former is available on
+  PyPI (as ``pelican-readtime``), while the latter is not.
 - :support:`2` document optionally supported plugins
 - :release:`2.0.4 <2017-01-11>`
 - :bug:`10` fix archive page template code to work with Jinja2 v2.9.0
@@ -211,13 +205,10 @@ Changelog
 - :feature:`-` add Seafoam logo
 - :support:`-` [BREAKING] rename from
   ``minchin.pelican.themes.minchindotca`` to ``seafoam``
-- :feature:`-` add support for reading time via `post stats
-  <https://github.com/getpelican/pelican-plugins/tree/master/post_stats>`_
-  plugin
+- :feature:`-` add support for reading time via `post stats`_ plugin
 - :bug:`6 major` restyle comments with bootstrap's ``media`` class (much
   cleaner template code)
-- :feature:`-` add support for `pelican comment system
-  <https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system>`_
+- :feature:`-` add support for `pelican comment system`_
 - :feature:`-` upgrade to FontAwesome 4.7.0
 - :feature:`-` upgrade to jQuery 3.1.0
 - :bug:`5 major` switch template variable from ``PAGES`` to ``pages`` to
@@ -231,12 +222,12 @@ Changelog
 - :release:`1.1.0 <2016-09-12>`
 - :feature:`-` include (thumbnail of) featured image on article listing
 - :support:`-` start documentation with the changelog (this file)
-- :bug:`-` Better handling for copyright and modified dates in `footer.html`
+- :bug:`-` Better handling for copyright and modified dates in ``footer.html``
 - :feature:`-` add breadcrumbs to main blog post listing page
 - :support:`-` add release machinery
 - :release:`1.0.0 <2016-08-15>`
 - :feature:`-` add ``setup.py``, ``README.rst``, ``CHANGELOG.rst``.
-- :support:`-` move package to 'minchin.pelican.themes.minchindotca'
+- :support:`-` move package to ``minchin.pelican.themes.minchindotca``
 - :support:`-` pull code out of main Minchin.ca website repo
 
 
@@ -250,3 +241,11 @@ Changelog
 .. _blog.minchin.ca Issue #105: https://github.com/MinchinWeb/blog.minchin.ca/issues/105
 
 .. _CName Issue #153: https://github.com/minchinweb/minchin.pelican.plugins.cname/issues/153
+
+.. _microblogging plugin: https://blog.minchin.ca/label/microblogging-pelican/
+.. _pelican comment system: https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system
+.. _post stats: https://github.com/getpelican/pelican-plugins/tree/master/post_stats
+.. _prjct: https://github.com/MinchinWeb/prjct
+.. _pathlib2: https://pypi.python.org/pypi/pathlib2
+.. _readtime: https://pypi.python.org/pypi/pelican-readtime
+.. _@jorgesumle: https://github.com/jorgesumle
