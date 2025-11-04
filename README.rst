@@ -191,6 +191,7 @@ Fancy Checkboxes / Tasklist
 
 .. add Strathcona theme image
 
+.. _pelican-settings:
 
 Additional Settings
 -------------------
@@ -242,6 +243,10 @@ create the default configuration, you would need the following:
   }
 
   # the rest of the your configuration file...
+
+There are also a number of per-article (and per-page) metadata fields that can
+be set influence how an article (or page) is processed and displayed. Please
+review :ref:`those options below`.
 
 This documentation has to be manually updated. If the settings no longer match
 the theme's behavior, or a setting is missing from here, please open a ticket
@@ -698,6 +703,130 @@ It may also be helpful to review the
 
 On articles, the theme also looks for the ``image`` metadata setting to provide
 the *featured image* for the article.
+
+
+.. _article-metadata:
+
+Article (and Page) Metadata
+---------------------------
+
+There are also a number of per-article (and per-page) metadata fields that can
+be set influence how an article (or page) is processed and displayed; this is
+further to the :ref:`site-wide setting` set in your ``pelicanconf.py`` file.
+
+These are set in the frontmatter of an article (or page). Arbitrary keys are
+accepted, although the theme (or *Pelican*) won't necessarily act on them.
+
+.. TODO: Add code sample
+
+This documentation has to be manually updated, and this section is still be
+expaned. If the documentation here no longer match the theme's behavior, or a
+setting is missing from here, please open a ticket on `GitHub
+<https://github.com/MinchinWeb/seafoam/issues>`_.
+
+at
+  (Pages only) Additional breadcrumb "folder". This is the displayed name; see
+  also ``at_link``
+at_link
+  (Pages only) Additional breadcrumb "folder". This is the "up" page link,
+  relative to the ``SITEURL``; see also ``at``.
+author
+  Author of the article (or comment). Articles defaults ``AUTHOR``.
+avatar
+  Profile picture, used by comments. c.f. ``PELICAN_COMMENT_SYSTEM`` and
+  ``DISQUS_SITENAME``.
+category
+  The (singular) category the article belongs to. See also ``tags``.
+comments_count
+  The number of comments attached to an article. Generally set by a plugin.
+completed
+  When a task was completed (or cancelled). c.f. ``tasknote`` and
+  ``task_status``.
+content
+  Set by *Pelican* as the "body" of the article.
+copy_date
+  Copyright date for at article or page.
+date
+  publication date of the article (or page)
+due
+  When a task is due. c.f. ``tasknote``.
+image
+  Hero (or header) image. Provided location is relative to the ``SITEURL`` in
+  the generated site.
+has_summary
+  Set by Pelican (?) to ``True`` if a summary is available.
+gpx
+  Set to ``True`` to denote a GPX "post". Changes how the article is processed
+  and how it is displayed. See also ``gpx_start_time`` and ``gpx_end_time``.
+gpx_start_time
+  When a GPX tracking file started. c.f. ``gpx``.
+gpx_end_time
+  When a GPX tracking file ended. c.f. ``gpx``.
+metadata
+  Used by the comments. The key ``website`` is the link back to the author's
+  website. c.f. ``PELICAN_COMMENT_SYSTEM`` and ``DISQUS_SITENAME``.
+micro
+  Set to ``True`` to denote a microblog post. Changes how the article is
+  processed and how it is displayed.
+modified
+  (Last) date a page was updated.
+next_article
+  refernce to the "previous" article. c.f ``prev_article``. c.f. ``NEIGHBORS``.
+  Set by a plugin.
+next_article_in_category
+  See ``next_article``.
+og_image
+  OpenGraph image for the article.
+prev_article
+  refernce to the "previous" article. c.f ``next_article``. c.f. ``NEIGHBORS``.
+  Set by a plugin.
+prev_article_in_category
+  See ``prev_article``.
+readtime_minutes
+  Expected reading time for the article. Generally provided by a plugin. c.f.
+  ``stats["read_min"]``.
+related_posts
+  A dictionary of "related posts"; generally set by a plugin. C.f.
+  ``RELATED_POSTS_TEXT``
+scheduled
+  When a task is (next) scheduled for. c.f. ``tasknote``.
+slug
+  Used to generate the URL to the page. Must be unique (a requirement of
+  *Pelican*).
+stats
+  Generally provided by a plugin. Key ``read_mins`` provided the expected
+  reading time; c.f. ``readtime_minutes``.
+subtitle
+  Subtitle for the article.
+summary
+  A short version of the body of the article. Can be set directly, or *Pelican*
+  (or a plugin) will generate it for you.
+
+  If ``USE_OPEN_GRAPH`` is ``True``, this doubles as the Open Graph
+  description.
+tags
+  A list of the tags applicable to the article. See also ``category``.
+task_status
+  The status of a task. In particular, it checks if a task is set to
+  ``cancelled``. c.f. ``tasknote``.
+tasknote
+  Set to ``True`` to denote a task note "post". Changes how the activle is
+  processed and how it is displayed.
+
+  See also ``completed``, ``due``, ``scheduled``, ``task_status``, ``tasknote_checkbox``, ``threshold_date``, 
+tasknote_checkbox
+  . c.f. ``tasknote``.
+threshold_date
+  The date a task becomes of interest (and is generally ignored before this
+  date). c.f. ``tasknote``.
+title
+  Article title. Used several places as the "name" for links back to the
+  article.
+translations
+  A list of translations for an article. Generated by *Pelican*.
+url
+  Set by *Pelican*. Location (on the webpage) of the article, relative to the
+  ``SITEURL``.
 
 
 Known Issues

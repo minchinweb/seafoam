@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :support:`27` Note which article metadata keys are acted on.
 - :support:`-` Remove "AddThis" support. (The service has been defunct since
   May of 2023.)
 - :release:`2.13.1 <2025-11-03>`
