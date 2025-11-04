@@ -246,7 +246,7 @@ create the default configuration, you would need the following:
 
 There are also a number of per-article (and per-page) metadata fields that can
 be set influence how an article (or page) is processed and displayed. Please
-review :ref:`those options below`.
+review `those options below <#article-metadata>`_.
 
 This documentation has to be manually updated. If the settings no longer match
 the theme's behavior, or a setting is missing from here, please open a ticket
@@ -734,7 +734,8 @@ Article (and Page) Metadata
 
 There are also a number of per-article (and per-page) metadata fields that can
 be set influence how an article (or page) is processed and displayed; this is
-further to the :ref:`site-wide setting` set in your ``pelicanconf.py`` file.
+further to the `site-wide setting <#pelican-settings>`_ set in your
+``pelicanconf.py`` file.
 
 These are set in the frontmatter of an article (or page). Arbitrary keys are
 accepted, although the theme (or *Pelican*) won't necessarily act on them.

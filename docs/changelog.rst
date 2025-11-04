@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.13.2 <2025-11-04>`
 - :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
   installed (article listings, article page infobox).
 - :support:`27` Note which article metadata keys are acted on.
