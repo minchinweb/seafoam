@@ -269,10 +269,6 @@ ADAM_UPDATED
   Override the updated date.
 ADAM_VERSION
   Reported name and version of "Adam". 
-ADDTHIS_PROFILE
-  You can enable sharing buttons through `AddThis <http://www.addthis.com/>`_
-  by this setting to your AddThis profile-id. This will display a Tweet,
-  Facebook Like and Google +1 button under each post.
 ARCHIVES_URL
   Same as the regular Pelican setting.
 ASSET_CSS
