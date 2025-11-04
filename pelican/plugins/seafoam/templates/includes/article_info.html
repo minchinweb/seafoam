@@ -1,11 +1,13 @@
 <footer class="post-info">
     {% if article.tasknote %}
         <span title="Created">➕</span>
+        <span class="published">
     {% else %}
         <span class="label label-default">Published</span>
+        <span class="published">
+            <i class="fa fa-calendar"></i>
     {% endif %}
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="{{ article.date.isoformat() }}">
+        <time datetime="{{ article.date.isoformat() }}">
             {{ article.date | article_date -}}
             {% if article.micro %}
                 at {{ article.date | datetime("%H:%M") }}
@@ -15,7 +17,7 @@
             {% elif article.tasknote %}
                 at {{ article.date | datetime("%H:%M") }}
             {% endif -%}
-            </time>
+        </time>
     </span>
     {# Uncomment if you want the author shown #}
     {#{% if article.author %}#}
@@ -26,22 +28,22 @@
     {# TaskNote Metadata #}
     {%- if article.tasknote -%}
         {% if article.threshold_date %}
-        {# TODO: cast as datetime.datetime #}
-        <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date }}">{{ article.threshold_date  -}}</time>
+            {# TODO: cast as datetime.datetime #}
+            &bull; <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date }}">{{ article.threshold_date  -}}</time>
         {% endif %}
         {% if article.scheduled %}
-        <span title="Scheduled">📅</span><time datetime="{{ article.scheduled }}">{{ article.scheduled -}} {# at {{ article.scheduled | datetime("%H:%M") }} #}</time>
+            &bull; <span title="Scheduled">📅</span><time datetime="{{ article.scheduled }}">{{ article.scheduled -}} {# at {{ article.scheduled | datetime("%H:%M") }} #}</time>
         {% endif %}
         {% if article.due %}
             {# TODO: cast as datetime.datetime #}
-            <span title="Due">⏳</span><time datetime="{{ article.due }}">{{ article.due -}}</time>
+            &bull; <span title="Due">⏳</span><time datetime="{{ article.due }}">{{ article.due -}}</time>
         {% endif %}
         {% if article.completed %}
             {# TODO: cast as datetime.datetime #}
             {% if article.task_status == "cancalled" %}
-                <span title="cancelled">❌</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
+                &bull; <span title="cancelled">❌</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
             {% else %}
-                <span title="completed">✅</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
+                &bull; <span title="completed">✅</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
             {% endif %}
         {% endif %}
     {%- endif -%}

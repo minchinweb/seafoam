@@ -3,12 +3,15 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
+  installed (article listings, article page infobox).
 - :support:`27` Note which article metadata keys are acted on.
 - :support:`-` Remove "AddThis" support. (The service has been defunct since
   May of 2023.)
 - :release:`2.13.1 <2025-11-03>`
 - :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
-  installed.
+  installed (article page title, article page infobox, TaskNote footer
+  display).
 - :bug:`42` don't break on valid PEP440 versions (e.g. ``4.11.0.post0``). See
   `AutoLoader Issue #4`_.
 - :support:`-` move from ``setup.py`` to ``pyproject``. See
