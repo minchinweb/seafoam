@@ -23,7 +23,7 @@
     {% if article.gpx %}
         {% set gpx_footer = True %}
     {% endif %}
-    {% if article.tasknote %}
+    {% if article.tasknote and TASKNOTES_DEV_URL and TASKNOTES_VERSION %}
         {% set tasknotes_footer = True %}
     {% endif %}
 {% endif -%}

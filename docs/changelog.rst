@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
+  installed.
 - :bug:`42` don't break on valid PEP440 versions (e.g. ``4.11.0.post0``). See
   `AutoLoader Issue #4`_.
 - :support:`-` move from ``setup.py`` to ``pyproject``. See
