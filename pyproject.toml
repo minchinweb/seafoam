@@ -50,7 +50,7 @@ dependencies = [
     "pelican",
     "pelican-image-process >= 2.1.1",
     "pelican-jinja-filters >= 2.1.0",
-    "semantic_version",
+    "packaging",
     "beautifulsoup4",
 ]
 license = "MIT"

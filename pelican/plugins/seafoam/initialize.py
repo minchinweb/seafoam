@@ -1,6 +1,8 @@
 import logging
 
-import semantic_version
+from packaging.specifiers import SpecifierSet
+
+from packaging.version import Version
 
 from pelican import __version__ as pelican_version
 
@@ -25,19 +27,17 @@ def pelican_namespace_plugin_support():
     Determine if the installed version of Pelican natively supports namespace
     plugins.
 
-    In short, the Pelican version must be greater than 4.6.0.
+    In short, the Pelican version must be greater than 4.5.0.
 
     Return:
         bool: if namespace plugins are supported
     """
+    # see https://github.com/minchinweb/minchin.pelican.plugins.autoloader/blob/master/minchin/pelican/plugins/autoloader.py
 
-    pelican_semver = semantic_version.Version(pelican_version)
-    if pelican_semver.major > 4:
-        return True
-    elif pelican_semver.major == 4 and pelican_semver.minor >= 5:
-        return True
-    else:
-        return False
+    pelican_parced_version = Version(pelican_version)
+    needed_spec = SpecifierSet(">= 4.5.0")
+
+    return pelican_parced_version in needed_spec
 
 
 def seafoam_dev_mode_active(pelican):
