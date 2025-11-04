@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :support:`-` move from ``setup.py`` to ``pyproject``. See
+  `AutoLoader Pull Request #2`_.
 - :release:`2.13.0 <2025-09-08>`
 - :feature:`40` display ``subtitle`` on Article pages.
 - :feature:`-` support for *TaskNotes* (``minchin.pelican.readers.tasknotes``)
@@ -236,3 +238,15 @@ Changelog
 - :feature:`-` add ``setup.py``, ``README.rst``, ``CHANGELOG.rst``.
 - :support:`-` move package to 'minchin.pelican.themes.minchindotca'
 - :support:`-` pull code out of main Minchin.ca website repo
+
+
+.. _Issue #18: https://github.com/minchinweb/seafoam/issues/18
+.. _Issue #29: https://github.com/minchinweb/seafoam/issues/29
+
+.. _AutoLoader Pull Request #2: https://github.com/minchinweb/minchin.pelican.plugins.autoloader/pull/2
+
+.. _blog.minchin.ca Issue #6: https://github.com/MinchinWeb/blog.minchin.ca/issues/6
+.. _blog.minchin.ca Issue #104: https://github.com/MinchinWeb/blog.minchin.ca/issues/104
+.. _blog.minchin.ca Issue #105: https://github.com/MinchinWeb/blog.minchin.ca/issues/105
+
+.. _CName Issue #153: https://github.com/minchinweb/minchin.pelican.plugins.cname/issues/153
