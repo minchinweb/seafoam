@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`- major` actually supply canonical URLs in the HTML head for articles
+  and pages.
 - :release:`2.13.2 <2025-11-04>`
 - :bug:`-` better handling of TaskNotes, when the (WIP) TaskNote plugin is not
   installed (article listings, article page infobox).

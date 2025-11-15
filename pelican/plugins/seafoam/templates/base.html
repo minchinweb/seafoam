@@ -155,6 +155,7 @@
         <link href="{{ SITEURL -}} / {{- FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
               title="{{ SITENAME }} RSS Feed"/>
     {% endif -%}
+    {% block canonical_rel %}{% endblock %}
 </head>
 <body>
     <div class="container">
