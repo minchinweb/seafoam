@@ -127,7 +127,15 @@ listed in this section are required.
 - Tipue Search
 - `Fancy Tasklists (Checkboxes)
   <https://github.com/MinchinWeb/minchin.md-it.fancy-tasklists>`_ -- this
-  extends the Markdown checkboxes to display a number of icons instead.
+  extends the (CommonMark) Markdown checkboxes to display a number of icons
+  instead.
+
+It also replaces the functions of the following:
+
+- `pelican-redirect-url
+  <https://github.com/FriedrichFroebel/pelican-redirect-url>`_ -- this is more
+  properly implemented as a theme extention, and so was directly added to
+  ``seafoam``. It uses the same metadata key: ``redirect_url``.
 
 
 Additional Images
@@ -808,6 +816,9 @@ prev_article_in_category
 readtime_minutes
   Expected reading time for the article. Generally provided by a plugin. c.f.
   ``stats["read_min"]``.
+redirect_url
+  When set, will use HTML to tell the browser to redirect the user from this
+  page/article to another webpage. You must provide the full URL.
 related_posts
   A dictionary of "related posts"; generally set by a plugin. C.f.
   ``RELATED_POSTS_TEXT``

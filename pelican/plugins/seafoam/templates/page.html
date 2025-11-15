@@ -11,8 +11,22 @@
 {%- endblock %}
 
 {% block canonical_rel %}
+    {% if page.redirect_url %}
+        <link rel="canonical" href="{{ page.redirect_url }}">
+    {% else %}
         <link rel="canonical" href="{{ SITEURL -}} / {{- page.url }}">
+    {% endif %}
 {% endblock %}
+
+
+{% block head_redirect %}
+    {% if page.redirect_url %}
+        <link rel="canonical" href="{{ page.redirect_url }}" />
+        <meta http-equiv="refresh" content="0;url={{ page.redirect_url }}" />
+    {% endif %}
+{% endblock %}
+
+
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
     <ol class="breadcrumb">
@@ -47,6 +61,13 @@
         {% endif %}
         <div class="entry-content">
             {{ page.content }}
+
+            {% if page.redirect_url %}
+                {# meta tag for redirect is in base.html template #}
+                <p>If you are not redirected, please click here:<br />
+                <a href="{{ page.redirect_url }}">{{ page.redirect_url }}</a></p>
+            {% endif %}
+
             {% if articles and ARTICLE_LISTING %}
                 {% for article in articles %}
                     {% with HEADING_LEVEL=3 %}

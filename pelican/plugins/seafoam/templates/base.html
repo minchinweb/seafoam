@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     {%- if FAVICON %}
-    <link href="{{ SITEURL -}} / {{- FAVICON }}" rel="icon">
+        <link href="{{ SITEURL -}} / {{- FAVICON }}" rel="icon">
     {% endif -%}
 
     {# Open Graph tags #}
@@ -155,6 +155,10 @@
         <link href="{{ SITEURL -}} / {{- FEED_ALL_RSS }}" type="application/atom+xml" rel="alternate"
               title="{{ SITENAME }} RSS Feed"/>
     {% endif -%}
+
+    <!-- Redirect -->
+    {% block head_redirect %}{% endblock %}
+
     {% block canonical_rel %}{% endblock %}
 </head>
 <body>
