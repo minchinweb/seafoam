@@ -13,8 +13,7 @@
 {% set JQUERY_JS_URL=SITEURL ~ "/" ~ THEME_STATIC_DIR ~ "/js/jquery.min.js?v=3.7.1" -%}
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
+<html prefix="og: https://ogp.me/ns#">
 <head>
     <title>{% block title %}{{ SITENAME | striptags | breaking_spaces }}{% endblock %}</title>
     <!-- Using the latest rendering mode for IE -->
