@@ -20,3 +20,4 @@ releaser:
             - setuptools
             - wheel
         pypi:
+            - pelican

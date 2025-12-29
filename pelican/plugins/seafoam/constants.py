@@ -1,5 +1,5 @@
 __title__ = "seafoam"
-__version__ = "2.14.1"
+__version__ = "2.14.2-dev"
 __description__ = "Pelican theme, first used for Minchin.ca."
 __author__ = "W. Minchin"
 __email__ = "w_minchin@hotmail.com"
