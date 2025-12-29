@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.14.1 <2025-12-28>`
 - :bug:`-` better alignment with HTML5 (over XHTML)
 - :release:`2.14.0 <2025-11-15>`
 - :bug:`- major` actually supply canonical URLs in the HTML head for articles
