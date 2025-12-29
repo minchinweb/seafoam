@@ -29,7 +29,7 @@
     {%- if article.tasknote -%}
         {% if article.threshold_date %}
             {# TODO: cast as datetime.datetime #}
-            &bull; <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date }}">{{ article.threshold_date  -}}</time>
+            &bull; <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date }}">{{ article.threshold_date -}}</time>
         {% endif %}
         {% if article.scheduled %}
             &bull; <span title="Scheduled">📅</span><time datetime="{{ article.scheduled }}">{{ article.scheduled -}} {# at {{ article.scheduled | datetime("%H:%M") }} #}</time>
