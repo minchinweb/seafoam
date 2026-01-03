@@ -485,7 +485,7 @@ MENUITEMS
   ``'fa fa-fw fa-pencil'``. ``icon`` can be set to ``None``.
 
   If this is set, the working assumption is that the site you are generating is
-  a "sub-site".
+  a "sub-site", and this is the menu from the "master site".
 MENUITEMS_2
   Extra items you want added as a sub-menu. Use in conjunction with the
   ``MENUITEMS_2_AT`` setting. Provide a list of tuples of the form
@@ -494,7 +494,8 @@ MENUITEMS_2
   ``'fa fa-fw fa-pencil'``. ``icon`` can be set to ``None``.
 
   This setting is working on the assumption that your generated site in going
-  into a subdirectory of your "main" site.
+  to be served as a subdirectory of your "main" site (such as for GitHub
+  project pages).
 MENUITEMS_2_AT
   If ``MENUITEMS_2`` is set, under which (main) menu item are these to be
   displayed. This should match a "name" of one of the items on ``MENUITEMS``;
@@ -503,6 +504,9 @@ MENUITEMS_2_AT
   When set and Breadcrumbs are enabled, all items on the site are shown to be
   under both "home" (linked to at the ``SITE_ROOT_URL``) and ``MENUITEMS_2_AT``
   (linked to at ``MENUITEMS_2_AT_LINK``).
+
+  See also the page metadata option ``at`` if you want to do similiar to this
+  for select pages only.
 MENUITEMS_2_AT_LINK
   When set and Breadcrumbs are enabled, all items on the site are shown to be
   under both "home" (linked to at the ``SITE_ROOT_URL``) and ``MENUITEMS_2_AT``
@@ -756,11 +760,38 @@ setting is missing from here, please open a ticket on `GitHub
 <https://github.com/MinchinWeb/seafoam/issues>`_.
 
 at
-  (Pages only) Additional breadcrumb "folder". This is the displayed name; see
-  also ``at_link``
+  (Pages only) Additional breadcrumb "folder". This is the (link) displayed
+  name; see also ``at_link`` and ``at_2`` and ``at_3``. See also
+  ``MENUITEMS_2_AT`` if you want to do this for the whole site.
 at_link
-  (Pages only) Additional breadcrumb "folder". This is the "up" page link,
-  relative to the ``SITEURL``; see also ``at``.
+  (Pages only) Additional breadcrumb "folder". This is the "up" page link (i.e.
+  the url), relative to the ``SITEURL``; see also ``at``.
+
+  Setting this won't change where the actual page is served from by the server;
+  if you want the URL structure to match, set the ``slug`` for the page as
+  well. E.g.:
+
+  .. code-block:: markdown
+
+    title: My Sub-Page
+    at: Breadcrumb Folder Display
+    at_link: /at_folder/
+    slug: at_folder/my-page
+
+    Body of my page...
+
+at_2
+  (Pages only) Second additional breadcrumb "folder". This is the (link)
+  displayed name; see also ``at`` and ``at_2_link``.
+at_2_link
+  (Pages only) Second additional breadcrumb "folder". This is the "up" page
+  link (i.e. the url), relative to the ``SITEURL``; see also ``at_2``.
+at_3
+  (Pages only) Third additional breadcrumb "folder". This is the (link)
+  displayed name; see also ``at`` and ``at_3_link``.
+at_3_link
+  (Pages only) Third additional breadcrumb "folder". This is the "up" page link
+  (i.e. the url), relative to the ``SITEURL``; see also ``at_3``.
 author
   Author of the article (or comment). Articles defaults ``AUTHOR``.
 avatar
@@ -809,8 +840,8 @@ next_article_in_category
 og_image
   OpenGraph image for the article.
 prev_article
-  refernce to the "previous" article. c.f ``next_article``. c.f. ``NEIGHBORS``.
-  Set by a plugin.
+  reference to the "previous" article. c.f ``next_article``. c.f.
+  ``NEIGHBORS``. Set by a plugin.
 prev_article_in_category
   See ``prev_article``.
 readtime_minutes
@@ -844,7 +875,7 @@ task_status
   The status of a task. In particular, it checks if a task is set to
   ``cancelled``. c.f. ``tasknote``.
 tasknote
-  Set to ``True`` to denote a task note "post". Changes how the activle is
+  Set to ``True`` to denote a task note "post". Changes how the article is
   processed and how it is displayed.
 
   See also ``completed``, ``due``, ``scheduled``, ``task_status``, ``tasknote_checkbox``, ``threshold_date``, 

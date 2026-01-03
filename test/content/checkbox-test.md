@@ -2,10 +2,7 @@
 title: Checkbox Test
 date: 2024-01-31 21:42:00-0700
 modified: 2025-06-14 18:57:15-0600
-tags:
-    - test
-    - markdown
-    - checkboxes
+tags: test, markdown, checkboxes
 ---
 
 This is a test page to make sure "fancy" checkboxes render, the colours look

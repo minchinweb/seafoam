@@ -1,15 +1,13 @@
 ---
 title: Monospaced Font Test
 date: 2025-06-07 18:29:09 -0700
-tags:
-    - test
-    - markdown
+tags: test, markdown
 ---
 
 This is a test block pulled from the [Iosevka](https://typeof.net/Iosevka/)
 demo site.
 
-```txt
+```text
 ABC.DEF.GHI.JKL.MNO.PQRS.TUV.WXYZ
 abc.def.ghi.jkl.mno.pqrs.tuv.wxyz
 !iIlL17|¦ ¢coO08BDQ $5SZ2zs ∂96µm

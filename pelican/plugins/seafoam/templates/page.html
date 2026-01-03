@@ -37,6 +37,12 @@
         {% if page.at %}
             <li><a href="{{ SITEURL -}} / {{- page.at_link }}" title="{{ page.at }}">{{ page.at }}</a></li>
         {% endif %}
+        {% if page.at_2 %}
+            <li><a href="{{ SITEURL -}} / {{- page.at_2_link }}" title="{{ page.at_2 }}">{{ page.at_2 }}</a></li>
+        {% endif %}
+        {% if page.at_3 %}
+            <li><a href="{{ SITEURL -}} / {{- page.at_3_link }}" title="{{ page.at_3 }}">{{ page.at_3 }}</a></li>
+        {% endif %}
         {% if not page.url == '' %}
             <li class="active"><a href="{{ SITEURL -}} / {{- page.url }}" title="{{ page.title | trim }}">{{ page.title | trim }}</a></li>
         {% endif %}
