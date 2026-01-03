@@ -13,7 +13,7 @@
 {% block canonical_rel %}
     {% if page.redirect_url %}
         <link rel="canonical" href="{{ page.redirect_url }}">
-    {% elif not article.disable_canonical_url %} %}
+    {% elif not page.disable_canonical_url %}
         <link rel="canonical" href="{{ SITEURL -}} / {{- page.url }}">
     {% endif %}
 {% endblock %}
@@ -44,7 +44,7 @@
             <li><a href="{{ SITEURL -}} / {{- page.at_3_link }}" title="{{ page.at_3 }}">{{ page.at_3 }}</a></li>
         {% endif %}
         {% if not page.url == '' %}
-            <li class="active"><a href="{{ SITEURL -}} / {{- page.url }}" title="{{ page.title | trim }}">{{ page.title | trim }}</a></li>
+            <li class="active"><a href="{{ SITEURL -}} / {{- page.url }}" title="{{ page.title | striptags | trim }}">{{ page.title | striptags | trim }}</a></li>
         {% endif %}
     </ol> <!-- /.breadcrumbs -->
     {% endif %}
@@ -53,7 +53,7 @@
 {% block content %}
     <section id="content" class="body">
         {% if page.image %}
-            <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- page.image|urlencode }}" alt="{{ page.title|striptags }}"/>
+            <img class="featured-image image-process-article-feature" src="{{ SITEURL -}} / {{- page.image | urlencode }}" alt="{{ page.title | striptags }}"/>
         {% endif %}
         <header class="entry-header">
             <h1 class="entry-title">{{ page.title }}</h1>

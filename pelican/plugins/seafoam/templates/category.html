@@ -15,7 +15,7 @@
         <li><a href="{{ SITEURL -}} / {{- MENUITEMS_2_AT_LINK }}" title="{{ MENUITEMS_2_AT }}">{{ MENUITEMS_2_AT }}</a></li>
       {% endif %}
         <li><a href="{{ SITEURL -}} / {{- CATEGORIES_URL }}" title="{{ SITENAME }} Categories">Categories</a></li>
-        <li class="active">{{ category }}</li>
+        <li class="active">{{ category | striptags | trim }}</li>
     </ol>
     {% endif %}
 {% endblock %}

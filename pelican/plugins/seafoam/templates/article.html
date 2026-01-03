@@ -18,10 +18,10 @@ s{% endif %}
         <meta name="author" content="{{ AUTHOR }}">
     {% endif %}
     {% if article.tags %}
-        <meta name="keywords" content="{{ article.tags|join(',')|striptags }}">
+        <meta name="keywords" content="{{ article.tags | join(',') | striptags }}">
     {% endif %}
     {% if article.summary %}
-        <meta name="description" content="{{ article.summary|striptags|escape }}">
+        <meta name="description" content="{{ article.summary | striptags | escape }}">
     {% endif %}
 {% endblock %}
 
@@ -81,12 +81,12 @@ s{% endif %}
                 <li><a href="{{ SITEURL -}} / {{- MENUITEMS_2_AT_LINK }}" title="{{ MENUITEMS_2_AT }}">{{ MENUITEMS_2_AT }}</a></li>
             {% endif %}
             {% if DISPLAY_CATEGORY_IN_BREADCRUMBS or article.micro %}
-                <li><a href="{{ SITEURL -}} / {{- article.category.url }}" title="{{ article.category }}">{{ article.category }}</a></li>
+                <li><a href="{{ SITEURL -}} / {{- article.category.url }}" title="{{ article.category | striptags | trim }}">{{ article.category | striptags | trim }}</a></li>
             {% endif %}
             {% if article.micro %}
                 <li class="active">{{ article.date | datetime("%B %d, %Y at %H:%M") }}</li>
             {% else %}
-                <li class="active">{{ article.title | striptags }}</li>
+                <li class="active">{{ article.title | striptags | trim }}</li>
             {% endif %}
         </ol>     
     {% endif %}
