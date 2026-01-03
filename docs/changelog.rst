@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.15.1 <2026-01-02>`
 - :bug:`-` fix escaping of page titles in breadcumb links.
 - :release:`2.15.0 <2026-01-02>`
 - :feature:`46` better support for canonical urls. See `Pelican Discussion

@@ -12,11 +12,12 @@ releaser:
     version_bump: none
     extra_packages:
         test:
-            - pillow
+            - packaging
             - pelican
-            - soupsieve
             - pelican-image-process
             - pelican-jinja-filters
+            - pillow
             - setuptools
+            - soupsieve
             - wheel
         pypi:
