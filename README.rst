@@ -82,7 +82,7 @@ Requirements
 ------------
 
 ``Seafoam`` requires Pelican, the ``image_process`` plugin, the
-``jinja filters`` plugin, ``beautifulsoup4``, and ``semantic_version``. If the
+``jinja filters`` plugin, ``beautifulsoup4``, and ``packaging``. If the
 theme is installed from pip, these should be automatically installed. If
 needed, they can be manually installed with pip:
 
@@ -92,7 +92,7 @@ needed, they can be manually installed with pip:
    pip install pelican-image-process
    pip install pelican-jinja-filters
    pip install beautifulsoup4
-   pip install semantic_version
+   pip install packaging
 
 
 Supported Plugins

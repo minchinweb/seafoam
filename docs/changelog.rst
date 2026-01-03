@@ -26,6 +26,8 @@ Changelog
   display).
 - :bug:`42` don't break on valid PEP440 versions (e.g. ``4.11.0.post0``). See
   `AutoLoader Issue #4`_.
+- :support:`42` remove ``semantic_version`` as a dependency and add
+  ``packaging``. c.f. `Issue #44`_.
 - :support:`-` move from ``setup.py`` to ``pyproject``. See
   `AutoLoader Pull Request #2`_.
 - :release:`2.13.0 <2025-09-08>`
@@ -256,6 +258,7 @@ Changelog
 
 .. _Issue #18: https://github.com/minchinweb/seafoam/issues/18
 .. _Issue #29: https://github.com/minchinweb/seafoam/issues/29
+.. _Issue #44: https://github.com/minchinweb/seafoam/issues/44
 
 .. _AutoLoader Pull Request #2: https://github.com/minchinweb/minchin.pelican.plugins.autoloader/pull/2
 .. _AutoLoader Issue #4: https://github.com/minchinweb/minchin.pelican.plugins.autoloader/issues/4
