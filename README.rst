@@ -769,7 +769,8 @@ at_link
 
   Setting this won't change where the actual page is served from by the server;
   if you want the URL structure to match, set the ``slug`` for the page as
-  well. E.g.:
+  well. Finally, to keep the page from appearing in your list of pages in your
+  site navigation, set ``status: hidden``. E.g.:
 
   .. code-block:: markdown
 
@@ -777,6 +778,7 @@ at_link
     at: Breadcrumb Folder Display
     at_link: /at_folder/
     slug: at_folder/my-page
+    status: hidden
 
     Body of my page...
 
