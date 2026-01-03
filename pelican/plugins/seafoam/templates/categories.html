@@ -1,5 +1,8 @@
 {% extends "base.html" %}
 
+{# NOTE: Assumes no pagination #}
+{% set CANONICAL_URL = SITEURL + '/' + CATEGORIES_URL %}
+
 {% block title -%}
     Categories &mdash; {{ super() }}
 {%- endblock %}

@@ -1,5 +1,8 @@
 {% extends "article_list.html" %}
 
+{# NOTE: Assumes no pagination #}
+{% set CANONICAL_URL = SITEURL + '/' + AUTHOR_URL.format(slug=author.slug) %}
+
 {% block title -%}
     Articles by {{ author }} &mdash; {{ super() }}
 {%- endblock %}

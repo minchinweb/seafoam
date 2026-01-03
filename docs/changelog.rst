@@ -3,10 +3,14 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`46` better support for canonical urls. See `Pelican Discussion
+  #3541`_.
+- :feature:`-` add support for page metadata fields ``at_2`` and ``at_3`` (to
+  allow placing pages within the breadcrumb hierarchy).
 - :release:`2.14.1 <2025-12-28>`
 - :bug:`-` better alignment with HTML5 (over XHTML)
 - :release:`2.14.0 <2025-11-15>`
-- :bug:`- major` actually supply canonical URLs in the HTML head for articles
+- :bug:`46 major` actually supply canonical URLs in the HTML head for articles
   and pages.
 - :feature:`-` allowes HTML redirects, by adding ``redirect_url`` to your page
   or article frontmatter.
@@ -261,6 +265,8 @@ Changelog
 .. _blog.minchin.ca Issue #105: https://github.com/MinchinWeb/blog.minchin.ca/issues/105
 
 .. _CName Issue #153: https://github.com/minchinweb/minchin.pelican.plugins.cname/issues/153
+
+.. _Pelican Discussion #3541: https://github.com/getpelican/pelican/discussions/3541
 
 .. _microblogging plugin: https://blog.minchin.ca/label/microblogging-pelican/
 .. _pelican comment system: https://github.com/getpelican/pelican-plugins/tree/master/pelican_comment_system

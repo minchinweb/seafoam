@@ -13,7 +13,7 @@
 {% block canonical_rel %}
     {% if page.redirect_url %}
         <link rel="canonical" href="{{ page.redirect_url }}">
-    {% else %}
+    {% elif not article.disable_canonical_url %} %}
         <link rel="canonical" href="{{ SITEURL -}} / {{- page.url }}">
     {% endif %}
 {% endblock %}

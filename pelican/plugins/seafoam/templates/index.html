@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% if CANONICAL_URL is not defined %}
+    {% set CANONICAL_URL = SITEURL + '/' %}
+{% endif %}
+
 {% block breadcrumbs %}
     {% if DISPLAY_BREADCRUMBS %}
         <ol class="breadcrumb">

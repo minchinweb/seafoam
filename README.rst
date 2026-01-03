@@ -810,6 +810,9 @@ copy_date
   Copyright date for at article or page.
 date
   publication date of the article (or page)
+disable_canonical_url
+  Set to ``True`` to keep from adding a canonical link in the header of the
+  article or page.
 due
   When a task is due. c.f. ``tasknote``.
 image

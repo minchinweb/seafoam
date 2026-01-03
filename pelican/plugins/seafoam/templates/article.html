@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {# this is the actual, per article ("post") page #}
 
+{% if not article.disable_canonical_url %}
+    {% set CANONICAL_URL = SITEURL + '/' + article.url %}
+s{% endif %}
+
 {% block title -%}
     {{ article.title | striptags | breaking_spaces }} &mdash; {{ super() }}
 {%- endblock %}

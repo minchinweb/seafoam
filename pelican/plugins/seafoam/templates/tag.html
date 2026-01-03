@@ -1,5 +1,8 @@
 {% extends "index.html" %}
 
+{# NOTE: Assumes no pagination #}
+{% set CANONICAL_URL = SITEURL + '/' + TAG_URL.format(slug=tag.slug) %}
+
 {% block title -%}
     {{ tag|striptags|breaking_spaces }} &mdash; {{ super() }}
 {%- endblock %}
