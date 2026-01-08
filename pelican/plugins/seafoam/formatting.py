@@ -10,11 +10,11 @@ logger = logging.getLogger(__name__)
 # def table_fix(html_fragment, settings):
 def table_fix(path, context):
     """
-    Apply the ".table" class to all HTML tables within generated articles.
+    Apply the ``.table`` class to all HTML tables within generated articles.
 
     This is so the Bootstrap CSS works as expected.
 
-    Note that BeautifulSoup's roundtripping (parsing and re-writing) is not
+    Note that BeautifulSoup's round-tripping (parsing and re-writing) is not
     "pixel perfect" and may change the final HTML. In particular, the `lxml`
     and `html5lib` parser will add the `<html>` and `<body>` if they are
     missing. Here, we are dealing with the entire HTML document, so that
@@ -33,7 +33,7 @@ def table_fix(path, context):
             except KeyError:
                 table["class"] = "table"
                 REWRITE = True
-            
+
         if REWRITE:
             logging.debug('%s table fix for "%s"' % (LOG_PREFIX, path))
             f.seek(0)

@@ -91,4 +91,3 @@ if commonmark and fancy_tasklists:
         # minchin.md_it.fancy_tasklists.fancy_tasklists_plugin,
         fancy_tasklists.fancy_tasklists_plugin,
     )
-

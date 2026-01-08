@@ -7,14 +7,14 @@ __url__ = "http://blog.minchin.ca/label/seafoam/"
 __license__ = "MIT License"
 
 LOG_PREFIX = "[Seafoam]"
-PLUGIN_LIST = [
+PLUGIN_LIST: list[str] = [
     "pelican.plugins.seafoam",
     "pelican.plugins.jinja_filters",
 ]
-PRODUCTION_PLUGIN_LIST = PLUGIN_LIST + [
+PRODUCTION_PLUGIN_LIST: list[str] = PLUGIN_LIST + [
     "pelican.plugins.image_process",
 ]
-STYLES = [
+STYLES: list[str] = [
     "seafoam",
     "strathcona",
 ]
