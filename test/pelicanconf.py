@@ -11,9 +11,9 @@ except ImportError:
     fancy_tasklist = None
 
 
-# set both to true to debug templates
-SEAFOAM_DEV_MODE = True
-SEAFOAM_TEMPLATE_DEBUG = True
+# # set both to true to debug templates
+# SEAFOAM_DEV_MODE = True
+# SEAFOAM_TEMPLATE_DEBUG = True
 
 # THEME = seafoam.get_path()
 # BOOTSTRAP_THEME = "seafoam"
