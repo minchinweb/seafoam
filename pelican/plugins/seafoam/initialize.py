@@ -196,6 +196,13 @@ def check_settings(pelican):
     if "TAGS_TEXT" not in pelican.settings.keys():
         pelican.settings["TAGS_TEXT"] = "Tags"
 
+    # Template debugging is only active if (Seafoam) Debug mode is generally on
+    if "SEAFOAM_TEMPLATE_DEBUG" not in pelican.settings.keys() or not seafoam_dev_mode_active(pelican):
+        pelican.settings["SEAFOAM_TEMPLATE_DEBUG"] = False
+        logging.debug(
+            '%s SEAFOAM_TEMPLATE_DEBUG previously set manually. Is "%s"'
+            % (LOG_PREFIX, pelican.settings["SEAFOAM_TEMPLATE_DEBUG"])
+        )
 
 def seafoam_version(pelican):
     """

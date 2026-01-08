@@ -89,3 +89,39 @@
         </div>
     </section>
 {% endblock %}
+
+
+{% block additional_template_debug %}
+    <p><b>Page</b>: {{ page }} <br />
+        <ul>
+            <li><b>source_path</b>: {{ page.source_path }} </li>
+
+            <li><b>title</b>: {{ page.title }} </li>
+            <li><b>lang</b>: {{ page.lang }} </li>
+            <li><b>author</b>: {{ page.author }} </li>
+            <li><b>summary</b>: {{ page.summary }} </li>
+            <li><b>tags</b>: {{ page.tags }} </li>
+            <li><b>date</b>: {{ page.date }} </li>
+            <li><b>og_image</b>: {{ page.og_image }} </li>
+            <li><b>url</b>: {{ page.url }} </li>
+            <li><b>redirect_url</b>: {{ page.redirect_url }} </li>
+            <li><b>category</b>: {{ page.category }} </li>
+            <li><b>image</b>: {{ page.image }} </li>
+            <li><b>micro</b>: {{ page.micro }} </li>
+            <li><b>tasknote</b>: {{ page.tasknote }} </li>
+            <li><b>subtitle</b>: {{ page.subtitle }} </li>
+            <li><b>gpx</b>: {{ page.gpx }} </li>
+            <li><b>template</b>: {{ page.template }} </li>
+
+            <li><b>metadata</b>:
+            <ul>
+            {% for key, value in page.metadata.items() %}
+                <li>{{ key }} : {{ value }} </li>
+            {% endfor %}
+            </ul></li>
+            {# page.content #}
+            {# page.settings #}
+            {# page.context #}
+        </ul>
+    </p>
+{% endblock %}

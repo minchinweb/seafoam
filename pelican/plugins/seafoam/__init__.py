@@ -10,6 +10,7 @@ from pathlib import Path
 from pelican import signals
 
 from .constants import __version__  # NOQA
+from .debug import add_jinja_debug
 from .formatting import table_fix
 from .initialize import check_settings, seafoam_version
 
@@ -32,3 +33,4 @@ def register():
     signals.initialized.connect(check_settings)
     signals.initialized.connect(seafoam_version)
     signals.content_written.connect(table_fix)
+    signals.generator_init.connect(add_jinja_debug)

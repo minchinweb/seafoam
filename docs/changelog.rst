@@ -3,6 +3,9 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` add ``SEAFOAM_TEMPLATE_DEBUG`` setting to allow insight into
+  what context is being provided to Jinja (the templating engine). You'll need
+  to also set ``SEAFOAM_DEV_MODE = True`` for this to activate.
 - :release:`2.15.1 <2026-01-02>`
 - :bug:`-` fix escaping of page titles in breadcumb links.
 - :release:`2.15.0 <2026-01-02>`

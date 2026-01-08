@@ -160,3 +160,38 @@ s{% endif %}
         </article>
     </section>  <!-- /#content -->
 {% endblock %}
+
+{% block additional_template_debug %}
+    <p><b>Article</b>: {{ article }} <br />
+        <ul>
+            <li><b>source_path</b>: {{ article.source_path }} </li>
+
+            <li><b>title</b>: {{ article.title }} </li>
+            <li><b>lang</b>: {{ article.lang }} </li>
+            <li><b>author</b>: {{ article.author }} </li>
+            <li><b>summary</b>: {{ article.summary }} </li>
+            <li><b>tags</b>: {{ article.tags }} </li>
+            <li><b>date</b>: {{ article.date }} </li>
+            <li><b>og_image</b>: {{ article.og_image }} </li>
+            <li><b>url</b>: {{ article.url }} </li>
+            <li><b>redirect_url</b>: {{ article.redirect_url }} </li>
+            <li><b>category</b>: {{ article.category }} </li>
+            <li><b>image</b>: {{ article.image }} </li>
+            <li><b>micro</b>: {{ article.micro }} </li>
+            <li><b>tasknote</b>: {{ article.tasknote }} </li>
+            <li><b>subtitle</b>: {{ article.subtitle }} </li>
+            <li><b>gpx</b>: {{ article.gpx }} </li>
+            <li><b>template</b>: {{ article.template }} </li>
+
+            <li><b>metadata</b>:
+            <ul>
+            {% for key, value in article.metadata.items() %}
+                <li>{{ key }} : {{ value }} </li>
+            {% endfor %}
+            </ul></li>
+            {# article.content #}
+            {# article.settings #}
+            {# article.context #}
+        </ul>
+    </p>
+{% endblock %}

@@ -652,6 +652,8 @@ SEAFOAM_DEV_MODE = False
   Enable this to speed local development by (effectively) disabling the *Image
   Process* plugin. If you disable this in your ``pelicanconf.py``, you'll
   likely want to activate it in your ``publishconf.py`` file.
+
+  c.f. ``SEAFOAM_TEMPLATE_DEBUG``
 SEAFOAM_ENCODING = "uft-8"
   The encoding that Beautiful Soup uses when run by the internal plugin.
 SEAFOAM_PARSER = "html.parser"
@@ -659,6 +661,11 @@ SEAFOAM_PARSER = "html.parser"
   recent versions of the required ``image-process`` plugin).
 
   This is the parser that Beautiful Soup uses when run by the internal plugin.
+SEAFOAM_TEMPLATE_DEBUG = False
+  Turns on (Jinja) Template debugging, and will dump the context (as passed to
+  the Jinja2 templating engine) at the bottom of each page. Also needes
+  ``SEAFOAM_DEV_MODE = True`` to be active. Likely only of use if you are
+  trying to modify the theme.
 SEAFOAM_URL = "http://blog.minchin.ca/label/seafoam/"
   The project url of the theme (automatically provided by the bundled plugin).
 SEAFOAM_VERSION = ``pelican.plugins.seafoam.__version__``

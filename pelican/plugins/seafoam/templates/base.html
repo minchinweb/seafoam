@@ -284,6 +284,21 @@
 </div> <!-- /.container -->
 {%- include 'includes/footer.html' %}
 
+{% if SEAFOAM_TEMPLATE_DEBUG %}
+    {# dump the Jinja Context #}
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Jinja Context:</h2>
+
+                <p>{% debug %}</p>
+                
+                {% block additional_template_debug %}{% endblock %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
 {% if ASSET_JS %}
     {# put assets in a separate file, otherwise it breaks if the assets #}
     {# plugin is not active #}
