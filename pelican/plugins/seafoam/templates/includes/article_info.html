@@ -70,4 +70,8 @@
     {%- include 'includes/taglist.html' %}
     {% import 'includes/translations.html' as translations with context %}
     {{ translations.translations_for(article) }}
+
+    {% if DISPLAY_SOURCE_PATH %}
+        <span class="label label-default">Source File</span>&nbsp;<i class="fa fa-file"></i>&nbsp;{{ article.source_path | replace(PATH, "") }}
+    {% endif %}
 </footer><!-- /.post-info -->

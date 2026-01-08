@@ -204,6 +204,14 @@ def check_settings(pelican):
             % (LOG_PREFIX, pelican.settings["SEAFOAM_TEMPLATE_DEBUG"])
         )
 
+    if "DISPLAY_SOURCE_PATH" not in pelican.settings.keys():
+        pelican.settings["DISPLAY_SOURCE_PATH"] = False
+        logging.debug(
+            '%s DISPLAY_SOURCE_PATH previously set manually. Is "%s"'
+            % (LOG_PREFIX, pelican.settings["DISPLAY_SOURCE_PATH"])
+        )
+
+
 def seafoam_version(pelican):
     """
     Insert seafoam version into Pelican context.

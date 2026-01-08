@@ -379,6 +379,12 @@ DISPLAY_RECENT_POSTS_ON_SIDEBAR
   Include a listing of recent posts on the sidebar (assuming the sidebar is
   active; see ``HIDE_SIDEBAR`` setting). Also see the ``RECENT_POST_COUNT``
   setting.
+DISPLAY_SOURCE_PATH = False
+  Display the source path of the rendered document, relative to your ``PATH``
+  (i.e. your content root). Note that this may surface information that is
+  otherwise not be displayed (like your on-disk filename).
+
+  Currently only displayed on "articles".
 DISPLAY_TAGS_INLINE
   .
 DISPLAY_TAGS_ON_SIDEBAR = True

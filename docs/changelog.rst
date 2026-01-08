@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` add ``DISPLAY_SOURCE_PATH`` to show the source filename
+  (relative to your content root) in the infobox for articles.
 - :feature:`-` add ``SEAFOAM_TEMPLATE_DEBUG`` setting to allow insight into
   what context is being provided to Jinja (the templating engine). You'll need
   to also set ``SEAFOAM_DEV_MODE = True`` for this to activate.
