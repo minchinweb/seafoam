@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.16.0 <2026-01-08>`
 - :feature:`-` add ``DISPLAY_SOURCE_PATH`` to show the source filename
   (relative to your content root) in the infobox for articles.
 - :feature:`-` add ``SEAFOAM_TEMPLATE_DEBUG`` setting to allow insight into

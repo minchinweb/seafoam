@@ -2,7 +2,6 @@ import logging
 
 from pelican import signals
 
-
 logger = logging.getLogger(__name__)
 
 def add_jinja_debug(pelican):
