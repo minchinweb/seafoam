@@ -842,6 +842,9 @@ gpx_start_time
   When a GPX tracking file started. c.f. ``gpx``.
 gpx_end_time
   When a GPX tracking file ended. c.f. ``gpx``.
+menulabel = title
+  The label used for a page on the navigation menu. Defaults to the page's
+  title. Only applies to pages.
 metadata
   Used by the comments. The key ``website`` is the link back to the author's
   website. c.f. ``PELICAN_COMMENT_SYSTEM`` and ``DISQUS_SITENAME``.
