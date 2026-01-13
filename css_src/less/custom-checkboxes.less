@@ -78,6 +78,8 @@ span[data-task="w"],
 span[data-task="W"],
 span[data-task="x"],
 span[data-task="X"],
+span[data-task="z"],
+span[data-task="Z"],
 span[data-task="🚿"],
 span[data-task="⛪"],
 span[data-task="🦷"],
@@ -90,10 +92,15 @@ span[data-task="🎬"],
 span[data-task="📽"],
 span[data-task="🎞"],
 span[data-task="🎦"],
-span[data-task="🚶‍♀️"],
-span[data-task="🚶‍♂️"],
-span[data-task="🏊‍♀️"],
-span[data-task="🏊‍♂️"] {
+// span[data-task="🚶‍♀️"],
+// span[data-task="🚶‍♂️"],
+// span[data-task="🏊‍♀️"],
+// span[data-task="🏊‍♂️"],
+span[data-task="🛒"],
+span[data-task="💼"] {
+// span[data-task="🧺"],
+// span[data-task="💈"]
+// span[data-task="✈️"] {
     .fa-icon();
     // .far();  // default to "regular"
     font-family: 'Font Awesome 6 Free';
@@ -294,6 +301,7 @@ span[data-task="N"] {
     }
 }
 
+// delegated / ongoing / character / person
 span[data-task="@"] {
     color: @flat-aqua-lt;
     .fas();
@@ -341,7 +349,7 @@ span[data-task="E"] {
     color: inherit;
     .fas();
     &:before {
-        content: @fa-var-check;
+        content: @fa-var-check;  // placeholder
     }
 }
 
@@ -389,7 +397,7 @@ span[data-task="~"] {
     color: inherit;
     .fas();
     &:before {
-        content: @fa-var-check;
+        content: @fa-var-check;  // placeholder
     }
 }
 span[data-task="W"] {
@@ -549,5 +557,52 @@ span[data-task="🎲"] {
     .fas();
     &:before {
         content: @fa-var-dice;
+    }
+}
+
+// Shopping
+span[data-task="🛒"] {
+    color: @flat-lt-grey-dk;
+    .fas();
+    &:before {
+        content: @fa-var-cart-shopping;
+    }
+}
+
+// Briefcase
+span[data-task="💼"] {
+    color: @flat-bittersweet-lt;
+    .fas();
+    &:before {
+        content: @fa-var-briefcase;
+    }
+}
+
+// // Laundry
+// span[data-task="🧺"] {
+//     color: @flat-lt-grey-dk;
+//     .fas();
+//     &:before {
+//         content: @fa-var-dice;
+//     }
+// }
+
+// // Barber Pole
+// span[data-task="💈"] {
+//     color: @flat-lt-grey-dk;
+//     .fas();
+//     &:before {
+//         content: @fa-var-dice;
+//     }
+// }
+
+// ZZZ / Sleeping
+// span[data-task="💤"],
+span[data-task="z"],
+span[data-task="Z"] {
+    color: @flat-lavender-lt;
+    .fas();
+    &:before {
+        content: @fa-var-z;  // placeholder
     }
 }

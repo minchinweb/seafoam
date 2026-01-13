@@ -1,8 +1,8 @@
 ---
 title: Checkbox Test
 date: 2024-01-31 21:42:00-0700
-modified: 2025-06-14 18:57:15-0600
 tags: test, markdown, checkboxes
+modified: 2026-01-12 21:50:34-0700
 ---
 
 This is a test page to make sure "fancy" checkboxes render, the colours look
@@ -46,13 +46,11 @@ Likely requires `minchin.pelican.readers.commonmark` and
 - [R] `[R]` research
 - [B] `[B]` brainstorm
 - [Q] `[Q]` quote
-- [E] `[E]` example
 - [A] `[A]` answer
 - [r] `[r]` reward
 - [T] `[T]` time
 - [t] `[t]` talk
 - [O] `[O]` outline / plot
-- [~] `[~]` conflict
 - [W] `[W]` world
 - [F] `[F]` Foreshadow
 - [H] `[H]` favorite / health
@@ -65,17 +63,36 @@ Likely requires `minchin.pelican.readers.commonmark` and
 - [📕] `[📕]` Book
 - [🏠] `[🏠]` House
 - [📺] `[📺]` TV (Show)
-- [📽️] `[📽️]` Film / Movie -- **UTF-16**, not working
 - [🎥] `[🎥]` Film / Movie
 - [🎬] `[🎬]` Film / Movie
 - [📽] `[📽]` Film / Movie
 - [🎞] `[🎞]` Film / Movie
 - [🎦] `[🎦]` Film / Movie
-- [🚶‍♀️] `[🚶‍♀️]` Walking -- **UTF-16**, not working
-- [🚶‍♂️] `[🚶‍♂️]` Walking -- **UTF-16**, not working
-- [🏊‍♀️] `[🏊‍♀️]` Swimming -- **UTF-16**, not working
-- [🏊‍♂️] `[🏊‍♂️]` Swimming -- **UTF-16**, not working
 - [🎲] `[🎲]` Dice / Play
+- [🛒] `[🛒]` shopping
+- [💼] `[💼]` suitcase for professional/work?
+
+Placeholders:
+
+- [E] `[E]` example
+- [~] `[~]` conflict
+- [z] `[z]` zzz sleeping
+- [Z] `[Z]` zzz sleeping
+
+Not (yet?) working:
+
+- [📽️] `[📽️]` Film / Movie -- assumed **UTF-16**, not working
+- [🚶‍♀️] `[🚶‍♀️]` Walking -- assumed **UTF-16**, not working
+- [🚶‍♂️] `[🚶‍♂️]` Walking -- assumed **UTF-16**, not working
+- [🏊‍♀️] `[🏊‍♀️]` Swimming -- assumed **UTF-16**, not working
+- [🏊‍♂️] `[🏊‍♂️]` Swimming -- assumed **UTF-16**, not working
+
+Possible future additions:
+
+- [💤] `[💤]` zzz sleeping
+- [✈️] `[✈️]` plane/travel -- assumed **UTF-16**, not working
+- [🧺] `[🧺]` laundry basket?
+- [💈] `[💈]` barber pole for shave/haircut?
 
 ---
 

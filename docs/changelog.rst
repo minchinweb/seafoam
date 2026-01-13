@@ -3,6 +3,9 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` additional CSS to add indicators added by *fancy tasklists*
+  v1.3.0 (🛒 (shopping), 💼 (briefcase), placeholders for ``z`` and ``Z``
+  (sleeping?)).
 - :release:`2.16.0 <2026-01-08>`
 - :feature:`-` add ``DISPLAY_SOURCE_PATH`` to show the source filename
   (relative to your content root) in the infobox for articles.

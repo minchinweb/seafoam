@@ -19515,6 +19515,8 @@ span[data-task="w"],
 span[data-task="W"],
 span[data-task="x"],
 span[data-task="X"],
+span[data-task="z"],
+span[data-task="Z"],
 span[data-task="🚿"],
 span[data-task="⛪"],
 span[data-task="🦷"],
@@ -19527,10 +19529,8 @@ span[data-task="🎬"],
 span[data-task="📽"],
 span[data-task="🎞"],
 span[data-task="🎦"],
-span[data-task="🚶‍♀️"],
-span[data-task="🚶‍♂️"],
-span[data-task="🏊‍♀️"],
-span[data-task="🏊‍♂️"] {
+span[data-task="🛒"],
+span[data-task="💼"] {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -20333,6 +20333,53 @@ span[data-task="🎲"] {
 }
 span[data-task="🎲"]:before {
   content: "\f522";
+}
+span[data-task="🛒"] {
+  color: #e6e9ed;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+span[data-task="🛒"]:before {
+  content: "\f07a";
+}
+span[data-task="💼"] {
+  color: #fc6e51;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+span[data-task="💼"]:before {
+  content: "\f0b1";
+}
+span[data-task="z"],
+span[data-task="Z"] {
+  color: #ac92ec;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+span[data-task="z"]:before,
+span[data-task="Z"]:before {
+  content: "\5a";
 }
 body {
   padding-top: 70px;

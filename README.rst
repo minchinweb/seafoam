@@ -189,11 +189,12 @@ Monthly Archives
     :align: center
     :alt: 404 Error
 
-Fancy Checkboxes / Tasklist
+Fancy Checkboxes / Tasklist (with `CommonMark reader
+<https://github.com/minchinweb/minchin.pelican.readers.commonmark>`_)
 
-.. image:: https://github.com/MinchinWeb/seafoam/raw/master/docs/screenshots/2.10.0/fancy-checkboxes.png
+.. image:: https://github.com/MinchinWeb/seafoam/raw/master/docs/screenshots/2.17.0/fancy-checkboxes.png
     :align: center
-    :alt: 404 Error
+    :alt: Fancy Tasklists (in CommonMark)
 
 .. add microblog post image
 
