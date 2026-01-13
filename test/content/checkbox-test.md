@@ -1,12 +1,15 @@
 ---
 title: Checkbox Test
 date: 2024-01-31 21:42:00-0700
-tags: test, markdown, checkboxes
 modified: 2026-01-12 21:50:34-0700
+tags: 
+  - test
+  - markdown 
+  - checkboxes
 ---
 
 This is a test page to make sure "fancy" checkboxes render, the colours look
-good, and that the align well when imbedded in other lists.
+good, and that the align well when embedded in other lists.
 
 Likely requires `minchin.pelican.readers.commonmark` and
 `minchin.md-it.fancy-tasklists`.

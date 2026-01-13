@@ -1,7 +1,9 @@
 ---
 title: Monospaced Font Test
 date: 2025-06-07 18:29:09 -0700
-tags: test, markdown
+tags:
+  - test
+  - markdown
 ---
 
 This is a test block pulled from the [Iosevka](https://typeof.net/Iosevka/)

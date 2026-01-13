@@ -3,7 +3,9 @@ title: Markdown Display Test
 date: 2012-11-25
 updated: 2021-04-18
 version: 1.2.1
-tags: markdown, test
+tags:
+  - markdown
+  - test
 author: MinchinWeb
 category: test
 image: images/birger-strahl-olI66vtMgNo-unsplash.jpg
