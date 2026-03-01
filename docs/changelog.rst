@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` tweak code font size (from 90% to 83% of base size)
 - :release:`2.17.0 <2026-01-13>`
 - :feature:`-` additional CSS to add indicators added by *fancy tasklists*
   v1.3.0 (🛒 (shopping), 💼 (briefcase), placeholders for ``z`` and ``Z``

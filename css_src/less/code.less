@@ -14,7 +14,7 @@ samp {
 // Inline code
 code {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: @code-font-size;  // default is 90%
   color: @code-color;
   background-color: @code-bg;
   border-radius: @border-radius-base;
@@ -23,7 +23,7 @@ code {
 // User input typically entered via keyboard
 kbd {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: @code-font-size;  // default is 90%
   color: @kbd-color;
   background-color: @kbd-bg;
   border-radius: @border-radius-small;
