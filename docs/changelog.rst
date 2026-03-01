@@ -3,6 +3,9 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` tweak dates display for TaskNote plugin metadata
+- :bug:`-` tweak display of in-progress (`[/]`) list item from a half circle to
+  a half-done hourglass
 - :bug:`-` tweak code font size (from 90% to 83% of base size)
 - :release:`2.17.0 <2026-01-13>`
 - :feature:`-` additional CSS to add indicators added by *fancy tasklists*

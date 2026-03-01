@@ -74,21 +74,21 @@
                 <span title="Created">➕</span><time datetime="{{ article.date.isoformat() }}">{{ article.date | article_date }} at {{ article.date | datetime("%H:%M") }}</time>
                 {% if article.threshold_date %}
                     {# TODO: cast as datetime.datetime #}
-                    &bull; <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date }}">{{ article.threshold_date -}}</time>
+                    &bull; <span title="Start/Threshold Date">🛫</span><time datetime="{{ article.threshold_date.isoformat() }}">{{ article.threshold_date | datetime("%Y-%m-%d") -}}</time>
                 {% endif %}
                 {% if article.scheduled %}
-                    &bull; <span title="Scheduled">📅</span><time datetime="{{ article.scheduled }}">{{ article.scheduled -}} {# at {{ article.scheduled | datetime("%H:%M") }} #}</time>
+                    &bull; <span title="Scheduled">📅</span><time datetime="{{ article.scheduled.isoformat() }}">{{ article.scheduled | datetime("%Y-%m-%d") -}} {# at {{ article.scheduled | datetime("%H:%M") }} #}</time>
                 {% endif %}
                 {% if article.due %}
                     {# TODO: cast as datetime.datetime #}
-                    &bull; <span title="Due">⏳</span><time datetime="{{ article.due }}">{{ article.due -}}</time>
+                    &bull; <span title="Due">⏳</span><time datetime="{{ article.due.isoformat() }}">{{ article.due | datetime("%Y-%m-%d") -}}</time>
                 {% endif %}
                 {% if article.completed %}
                     {# TODO: cast as datetime.datetime #}
                     {% if article.task_status == "cancalled" %}
-                        &bull; <span title="cancelled">❌</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
+                        &bull; <span title="cancelled">❌</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed -}}</time>
                     {% else %}
-                        &bull; <span title="completed">✅</span><time datetime="{{ article.completed }}">{{ article.completed -}}</time>
+                        &bull; <span title="completed">✅</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed -}}</time>
                     {% endif %}
                 {% endif %}
             {%- else -%}

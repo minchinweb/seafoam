@@ -1614,14 +1614,14 @@ samp {
 }
 code {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 83%;
   color: #222;
   background-color: #e6e9ed;
   border-radius: 4px;
 }
 kbd {
   padding: 2px 4px;
-  font-size: 90%;
+  font-size: 83%;
   color: #222;
   background-color: #ccd1d9;
   border-radius: 3px;
@@ -19550,7 +19550,7 @@ span[data-task=" "]:before {
   content: "\f0c8";
 }
 span[data-task="/"] {
-  color: #4a89dc;
+  color: #f6bb42;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: var(--fa-display, inline-block);
@@ -19562,7 +19562,7 @@ span[data-task="/"] {
   font-weight: 900;
 }
 span[data-task="/"]:before {
-  content: "\f042";
+  content: "\f252";
 }
 span[data-task="x"],
 span[data-task="X"] {
