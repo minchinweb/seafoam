@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.17.2 <2026-03-02>`
 - :release:`2.17.1 <2026-03-01>`
 - :bug:`-` tweak dates display for TaskNote plugin metadata
 - :bug:`-` tweak display of in-progress (`[/]`) list item from a half circle to

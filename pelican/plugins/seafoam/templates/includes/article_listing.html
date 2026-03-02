@@ -86,9 +86,9 @@
                 {% if article.completed %}
                     {# TODO: cast as datetime.datetime #}
                     {% if article.task_status == "cancalled" %}
-                        &bull; <span title="cancelled">❌</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed -}}</time>
+                        &bull; <span title="cancelled">❌</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed | datetime("%Y-%m-%d") -}}</time>
                     {% else %}
-                        &bull; <span title="completed">✅</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed -}}</time>
+                        &bull; <span title="completed">✅</span><time datetime="{{ article.completed.isoformat() }}">{{ article.completed | datetime("%Y-%m-%d") -}}</time>
                     {% endif %}
                 {% endif %}
             {%- else -%}
