@@ -1,3 +1,5 @@
+// stylelint-disable selector-max-type, selector-max-compound-selectors, selector-max-combinators, no-duplicate-selectors
+
 //
 // Panels
 // --------------------------------------------------
@@ -9,10 +11,10 @@
   background-color: @panel-bg;
   border: 1px solid transparent;
   border-radius: @panel-border-radius;
-  .box-shadow(0 1px 1px rgba(0,0,0,.05));
   
   // THIS IS CUSTOM - WM
   color: @panel-body-text;
+  .box-shadow(0 1px 1px rgba(0, 0, 0, .05));
 }
 
 // Panel contents
@@ -116,8 +118,8 @@
     margin-bottom: 0;
 
     caption {
-      padding-left: @panel-body-padding;
       padding-right: @panel-body-padding;
+      padding-left: @panel-body-padding;
     }
   }
   // Add border top radius for first one
@@ -150,8 +152,8 @@
     > tbody:last-child,
     > tfoot:last-child {
       > tr:last-child {
-        border-bottom-left-radius: (@panel-border-radius - 1);
         border-bottom-right-radius: (@panel-border-radius - 1);
+        border-bottom-left-radius: (@panel-border-radius - 1);
 
         td:first-child,
         th:first-child {
@@ -211,8 +213,8 @@
     }
   }
   > .table-responsive {
-    border: 0;
     margin-bottom: 0;
+    border: 0;
   }
 }
 
