@@ -66,9 +66,53 @@
     {% endif %}
 {% endif %}
 
-<footer>
+<footer {% if FOOTER_ITEMS %}class="panel-footer"{% endif %}>
     <div class="container">
-        <hr>
+        {% if FOOTER_ITEMS %}
+        {% else %}
+            <hr>
+        {% endif %}
+
+        {% if FOOTER_SITELOGO %}
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="{{ SITEURL -}} / {{- FOOTER_SITELOGO }}" width="{{ FOOTER_SITELOGO_SIZE }}" alt="{{ SITENAME }}" class="img-responsive center-block">
+            </div>
+        </div>
+        {% endif %}
+
+        {% if FOOTER_ITEMS %}
+            <hr>
+            <div class="row">
+            {% for title, link, icon in FOOTER_ITEMS %}
+                <!-- {{title}} {{link}} {{icon}} -->
+                {% if link.startswith("header") %}
+                    {% set link = link.strip("header") %} <!-- {{ link }}-->
+                        <li class="list-group-item"><h5><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a></h5>
+                            <ul class="list-group">
+                {% elif link == "end-header" %}
+                            </ul>
+                        </li>
+                {% elif link.startswith("col") %}
+                <div class="{{ link }}">
+                    <ul class="list-group">
+                {% elif link == "end-col" %}
+                    </ul>
+                </div>
+                {% elif link.startswith("clearfix") %}
+                    <div class="{{ link }}"></div>
+                {% elif title == None %}
+                    {# pass #}
+                {% else %}
+                        <li class="list-group-item"><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a>
+                        </li>
+                {% endif %}
+            {% endfor %}
+            </div>  <!-- .row -->
+        {% endif %}
+
+        {# social media links? #}
+
         <div class="row">
             <div class="col-sm-10 col-xs-8">
                 &copy; {{ copy_date }} {{ AUTHOR }}

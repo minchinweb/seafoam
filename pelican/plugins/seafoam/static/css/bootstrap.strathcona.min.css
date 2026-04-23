@@ -17531,6 +17531,17 @@ li > p:has(+ ol) {
 #archives .microblog-post-tag {
   display: none;
 }
+/* Fat Footer
+// ------------------------------
+*/
+.panel-footer .list-group-item {
+  background-color: #e6e9ed;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.panel-footer h5 {
+  margin-bottom: 0;
+}
 /*
 // Custom Additions -- Seafoam theme colours
 // --------------------------------------------------
