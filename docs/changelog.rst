@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :release:`2.18.0 <2026-04-23>`
 - :feature:`-` add support for "fat" footers
 - :bug:`- major` upgrade to Bootstrap v3.4.1
 - :release:`2.17.2 <2026-03-02>`

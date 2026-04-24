@@ -440,10 +440,10 @@ FOOTER_SITELOGO_SIZE
   See also ``FOOTER_SITELOGO``.
 FOOTER_ITEMS
   Items to add to the "fat footer" at the bottom of all pages. Provide a list
-  of tuples of the form ``(title, link, icon)``. ``link`` is absolute, so build
-  them using SITEURL, if needed. ``icon`` here is of the form of the CSS
-  classes to be used; e.g. ``'fa fa-fw fa-pencil'``. ``icon`` can be set to
-  ``None``.
+  (or a set or a tuple) of tuples of the form ``(title, link, icon)``. ``link``
+  is absolute, so build them using SITEURL, if needed. ``icon`` here is of the
+  form of the CSS classes to be used; e.g. ``'fa fa-fw fa-pencil'``. ``icon``
+  can be set to ``None``.
 
   There are also a number of "special" links that can be provided to control
   the layout:
@@ -463,53 +463,57 @@ FOOTER_ITEMS
 
     A full example might look like this:
 
-      FOOTER_ITEMS = (
-          (None, "col-md-4 col-sm-6", None),
-          ("Electricity", "header " + SITEURL + "/electricity/", None),
-              ("Floating", SITEURL + "/electricity/floating/", None),
-              ("1 Year Fixed", SITEURL + "/electricity/fixed/1-year/", None),
-              (None, "end-header", None),
-          (None, "end-col", None),
-      
-          (None, "col-md-4 col-sm-6", None),
-          ("Natural Gas", "header "+ SITEURL + "/natural-gas/", None),
-              ("Floating", SITEURL + "/natural-gas/floating/", None),
-              ("5 Year Fixed", SITEURL + "/natural-gas/fixed/", None),
-              (None, "end-header", None),
-          (None, "end-col", None),
-          (None, "clearfix visible-sm-block", None),
-      
-          (None, "col-md-4 col-sm-6", None),
-          ("Solar Rates", SITEURL + "/solar/", None),
-          ("Behind-the-Fence Generation", SITEURL + "/behind-the-fence-generation/", None),
-          (None, "end-col", None),
-          (None, "clearfix visible-lg-block visible-md-block", None),
-      
-          (None, "col-md-4 col-sm-6", None),
-          ("Our Story", SITEURL + "/about-strathcona-power/", None),  # About Us
-          ("Fundraisers", "header " + SITEURL + "/fundraising/", None),
-              ("Danceing", SITEURL + "/fundraising/dancing/", None),
-              (None, "end-header", None),
-          (None, "end-col", None),
-          (None, "clearfix visible-sm-block", None),
-      
-          (None, "col-md-4 col-sm-6", None),
-          ("Blog", "header " + SITEURL + "/" + ARCHIVES_URL, None),
-              ("Fixed vs Floating?", SITEURL + "/" + CATEGORY_URL.format(slug="fixed-vs-floating") + "/", None),
-              # ("All Archives", SITEURL + "/" + ARCHIVES_URL, None),
-              (None, "end-header", None),
-          (None, "end-col", None),
-      
-          (None, "col-md-4 col-sm-6", None),
-          ("Contact Us", SITEURL + "/contact-us/", None),
-          ("Sign Up", SITEURL + "/signup/", None),
-          ("My Account", SITEURL + "/account/", None),
-          ("Facebook", "https://www.facebook.com/", "fa-brands fa-facebook"),
-          ("LinkedIn", "https://www.linkedin.com/", "fa-brands fa-linkedin"),
-          ("555-555-1065", "tel:+1-555-55-1065", "fas fa-phone"),  # phone number
-          ("Email Us!", "mailto:email@example.com)", "fas fa-envelope"),  # email
-          (None, "end-col", None),
-      )
+  .. code-block:: python
+
+    # pelicanconf.py
+
+    FOOTER_ITEMS = (
+        (None, "col-md-4 col-sm-6", None),
+        ("Electricity", "header " + SITEURL + "/electricity/", None),
+            ("Floating", SITEURL + "/electricity/floating/", None),
+            ("1 Year Fixed", SITEURL + "/electricity/fixed/1-year/", None),
+            (None, "end-header", None),
+        (None, "end-col", None),
+    
+        (None, "col-md-4 col-sm-6", None),
+        ("Natural Gas", "header "+ SITEURL + "/natural-gas/", None),
+            ("Floating", SITEURL + "/natural-gas/floating/", None),
+            ("5 Year Fixed", SITEURL + "/natural-gas/fixed/", None),
+            (None, "end-header", None),
+        (None, "end-col", None),
+        (None, "clearfix visible-sm-block", None),
+    
+        (None, "col-md-4 col-sm-6", None),
+        ("Solar Rates", SITEURL + "/solar/", None),
+        ("Behind-the-Fence Generation", SITEURL + "/behind-the-fence-generation/", None),
+        (None, "end-col", None),
+        (None, "clearfix visible-lg-block visible-md-block", None),
+    
+        (None, "col-md-4 col-sm-6", None),
+        ("Our Story", SITEURL + "/about-strathcona-power/", None),  # About Us
+        ("Fundraisers", "header " + SITEURL + "/fundraising/", None),
+            ("Danceing", SITEURL + "/fundraising/dancing/", None),
+            (None, "end-header", None),
+        (None, "end-col", None),
+        (None, "clearfix visible-sm-block", None),
+    
+        (None, "col-md-4 col-sm-6", None),
+        ("Blog", "header " + SITEURL + "/" + ARCHIVES_URL, None),
+            ("Fixed vs Floating?", SITEURL + "/" + CATEGORY_URL.format(slug="fixed-vs-floating") + "/", None),
+            # ("All Archives", SITEURL + "/" + ARCHIVES_URL, None),
+            (None, "end-header", None),
+        (None, "end-col", None),
+    
+        (None, "col-md-4 col-sm-6", None),
+        ("Contact Us", SITEURL + "/contact-us/", None),
+        ("Sign Up", SITEURL + "/signup/", None),
+        ("My Account", SITEURL + "/account/", None),
+        ("Facebook", "https://www.facebook.com/", "fa-brands fa-facebook"),
+        ("LinkedIn", "https://www.linkedin.com/", "fa-brands fa-linkedin"),
+        ("555-555-1065", "tel:+1-555-55-1065", "fas fa-phone"),  # phone number
+        ("Email Us!", "mailto:email@example.com)", "fas fa-envelope"),  # email
+        (None, "end-col", None),
+    )
   
   Note: this syntax is far more complicated than I'd like, and so may change in
   the future....
@@ -573,10 +577,11 @@ LINKS = []
   Extra links to display sidebar. Provide a list of tuples of the form
   ``('name', 'link')``.
 MENUITEMS
-  Extra items to add to the menu. Provide a list of tuples of the form
-  ``(title, link, icon)``. ``link`` is absolute, so build them using SITEURL, 
-  if needed. ``icon`` here is of the form of the CSS classes to be used; e.g.
-  ``'fa fa-fw fa-pencil'``. ``icon`` can be set to ``None``.
+  Extra items to add to the menu. Provide a list (or a set or a tuple) of
+  tuples of the form ``(title, link, icon)``. ``link`` is absolute, so build
+  them using SITEURL, if needed. ``icon`` here is of the form of the CSS
+  classes to be used; e.g. ``'fa fa-fw fa-pencil'``. ``icon`` can be set to
+  ``None``.
 
   If this is set, the working assumption is that the site you are generating is
   a "sub-site", and this is the menu from the "master site".
