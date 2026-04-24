@@ -428,6 +428,93 @@ FEED_ALL_ATOM
 FEED_ALL_RSS
   Same as the regular Pelican setting. If set, a link to your RSS feed will
   appear in the site's HTML header.
+FOOTER_SITELOGO
+  Link to the site logo (displayed centred at the top of the footer). This is
+  relative to the SITEURL.
+
+  See also ``SITELOGO`` and ``FOOTER_SITELOGO_SIZE``.
+FOOTER_SITELOGO_SIZE
+  The width of the site logo in the footer. Can be set to any valid CSS value
+  (i.e. %, em, px, etc).
+
+  See also ``FOOTER_SITELOGO``.
+FOOTER_ITEMS
+  Items to add to the "fat footer" at the bottom of all pages. Provide a list
+  of tuples of the form ``(title, link, icon)``. ``link`` is absolute, so build
+  them using SITEURL, if needed. ``icon`` here is of the form of the CSS
+  classes to be used; e.g. ``'fa fa-fw fa-pencil'``. ``icon`` can be set to
+  ``None``.
+
+  There are also a number of "special" links that can be provided to control
+  the layout:
+
+  - (starts with) ``header`` to turn the item into a ``h5`` heading, and indent
+    following items. ``header`` can be suffixed by a "real" link, if desired.
+  - ``end-header`` to finish the indented sublist under the header
+  - (starts with) ``col`` to control how many columns that part of the footer
+    should take up. Applied directly as a Bootstrap 3 class. Of the form
+    ``col-<size breakpoint>-<number of columns>`` e.g. ``col-md-3``. Valid
+    "sizes" are ``xs``, ``sm``, ``md``, and ``lg``. Valid number of columns is
+    1 to 12 (with 12 being full-width).
+  - ``end-col`` to finish a column.
+  - (starts with) ``clearfix`` to apply a Bootstrap 3 "clearfix", i.e. to keep
+    all following columns below this line. Need to supply the full clearfix
+    class(es), e.g. ``clearfix visible-sm-block``.
+
+    A full example might look like this:
+
+      FOOTER_ITEMS = (
+          (None, "col-md-4 col-sm-6", None),
+          ("Electricity", "header " + SITEURL + "/electricity/", None),
+              ("Floating", SITEURL + "/electricity/floating/", None),
+              ("1 Year Fixed", SITEURL + "/electricity/fixed/1-year/", None),
+              (None, "end-header", None),
+          (None, "end-col", None),
+      
+          (None, "col-md-4 col-sm-6", None),
+          ("Natural Gas", "header "+ SITEURL + "/natural-gas/", None),
+              ("Floating", SITEURL + "/natural-gas/floating/", None),
+              ("5 Year Fixed", SITEURL + "/natural-gas/fixed/", None),
+              (None, "end-header", None),
+          (None, "end-col", None),
+          (None, "clearfix visible-sm-block", None),
+      
+          (None, "col-md-4 col-sm-6", None),
+          ("Solar Rates", SITEURL + "/solar/", None),
+          ("Behind-the-Fence Generation", SITEURL + "/behind-the-fence-generation/", None),
+          (None, "end-col", None),
+          (None, "clearfix visible-lg-block visible-md-block", None),
+      
+          (None, "col-md-4 col-sm-6", None),
+          ("Our Story", SITEURL + "/about-strathcona-power/", None),  # About Us
+          ("Fundraisers", "header " + SITEURL + "/fundraising/", None),
+              ("Danceing", SITEURL + "/fundraising/dancing/", None),
+              (None, "end-header", None),
+          (None, "end-col", None),
+          (None, "clearfix visible-sm-block", None),
+      
+          (None, "col-md-4 col-sm-6", None),
+          ("Blog", "header " + SITEURL + "/" + ARCHIVES_URL, None),
+              ("Fixed vs Floating?", SITEURL + "/" + CATEGORY_URL.format(slug="fixed-vs-floating") + "/", None),
+              # ("All Archives", SITEURL + "/" + ARCHIVES_URL, None),
+              (None, "end-header", None),
+          (None, "end-col", None),
+      
+          (None, "col-md-4 col-sm-6", None),
+          ("Contact Us", SITEURL + "/contact-us/", None),
+          ("Sign Up", SITEURL + "/signup/", None),
+          ("My Account", SITEURL + "/account/", None),
+          ("Facebook", "https://www.facebook.com/", "fa-brands fa-facebook"),
+          ("LinkedIn", "https://www.linkedin.com/", "fa-brands fa-linkedin"),
+          ("555-555-1065", "tel:+1-555-55-1065", "fas fa-phone"),  # phone number
+          ("Email Us!", "mailto:email@example.com)", "fas fa-envelope"),  # email
+          (None, "end-col", None),
+      )
+  
+  Note: this syntax is far more complicated than I'd like, and so may change in
+  the future....
+
+  See also ``MENUITEMS``.
 GITHUB_REPO_COUNT = 5
   See ``GITHUB_USER`` setting.
 GITHUB_SHOW_USER_LINK
@@ -493,6 +580,8 @@ MENUITEMS
 
   If this is set, the working assumption is that the site you are generating is
   a "sub-site", and this is the menu from the "master site".
+
+  See also ``FOOTER_ITEMS``.
 MENUITEMS_2
   Extra items you want added as a sub-menu. Use in conjunction with the
   ``MENUITEMS_2_AT`` setting. Provide a list of tuples of the form
