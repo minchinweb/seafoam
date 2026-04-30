@@ -867,6 +867,13 @@ expaned. If the documentation here no longer match the theme's behavior, or a
 setting is missing from here, please open a ticket on `GitHub
 <https://github.com/MinchinWeb/seafoam/issues>`_.
 
+article_listing
+  (Pages only) set to ``True`` to display a listing of your most recent
+  articles on this page. The default is to list *all* articles. Change that
+  with ``article_listing_count``.
+article_listing_count
+  (Pages only) number of (the most recent) articles to list on the page.
+  ``article_listing`` must be set to ``True`` for this to have an effect.
 at
   (Pages only) Additional breadcrumb "folder". This is the (link) displayed
   name; see also ``at_link`` and ``at_2`` and ``at_3``. See also

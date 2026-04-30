@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`-` use ``article_listing`` and ``article_listing_count`` to display
+  a list of articles on an arbitrary page.
 - :release:`2.18.0 <2026-04-23>`
 - :feature:`-` add support for "fat" footers
 - :bug:`- major` upgrade to Bootstrap v3.4.1

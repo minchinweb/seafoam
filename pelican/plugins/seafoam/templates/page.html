@@ -4,7 +4,14 @@
     {% set ARTICLE_LISTING = False %}
 {% else %}
     {% set ARTICLE_LISTING = page.article_listing %}
+
+    {% if ARTICLE_LISTING and page.article_listing_count is not defined %}
+        {% set ARTICLE_LISTING_COUNT = 8 %}
+    {% else %}
+        {% set ARTICLE_LISTING_COUNT = page.article_listing_count | int %}
+    {% endif %}
 {% endif -%}
+
 
 {% block title -%}
     {{ page.title|striptags|breaking_spaces }} &mdash; {{ super() }}
@@ -75,8 +82,8 @@
             {% endif %}
 
             {% if articles and ARTICLE_LISTING %}
-                {% for article in articles %}
-                    {% with HEADING_LEVEL=3 %}
+                {% for article in articles[:ARTICLE_LISTING_COUNT] %}
+                    {% with HEADING_LEVEL = 3 %}
                         {% include 'includes/article_listing.html' %}
                     {% endwith %}
                 {% endfor %}
