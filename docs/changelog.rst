@@ -3,7 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
-- :bug:`-` tweak "all posts" link on page with article listing.
+- :release:`2.19.0 <2026-05-01>`
+- :bug:`- major` tweak "all posts" link on page with article listing.
 - :feature:`-` use ``article_listing`` and ``article_listing_count`` to display
   a list of articles on an arbitrary page.
 - :release:`2.18.0 <2026-04-23>`
