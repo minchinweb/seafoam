@@ -57,6 +57,7 @@
     {% endif %}
 {% endblock %}
 
+
 {% block content %}
     <section id="content" class="body">
         {% if page.image %}
@@ -87,7 +88,7 @@
                         {% include 'includes/article_listing.html' %}
                     {% endwith %}
                 {% endfor %}
-                <p><a href="{{ SITEURL -}} / {{- ARCHIVES_URL }}">Click to see every post in a big list</a></p>
+                <p><a href="{{ SITEURL -}} / {{- INDEX_URL }}">All blog posts</a></p>
             {% endif %}
             {% if ADAM_FOOTER %}
                 {{ ADAM_FOOTER }}
