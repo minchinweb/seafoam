@@ -22,7 +22,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    {%- if FAVICON %}
+    {% if FAVICON %}
         <link href="{{ SITEURL -}} / {{- FAVICON }}" rel="icon">
     {% endif -%}
 
@@ -55,34 +55,34 @@
             {% endif %}
             {% if article.image %}
                 <meta property="og:image"
-                    content="{{ SITEURL -}} / {{- article.image|urlencode }}">
+                    content="{{ SITEURL -}} / {{- article.image | urlencode }}">
             {% elif article.og_image %}
             <meta property="og:image"
                     content="{{ SITEURL -}} / {{- article.og_image }}">
             {% elif CATEGORY_IMAGES and article.category in CATEGORY_IMAGES %}
                 <meta property="og:image"
-                    content="{{ SITEURL -}} / {{- CATEGORY_IMAGES[article.category]|urlencode }}">
+                    content="{{ SITEURL -}} / {{- CATEGORY_IMAGES[article.category] | urlencode }}">
             {% elif OPEN_GRAPH_IMAGE %}
                 <meta property="og:image" content="{{ SITEURL -}} / {{- OPEN_GRAPH_IMAGE }}">
             {% endif %}
         {% elif page %}
             <meta property="og:type" content="article">
-            <meta property="og:title" content="{{ page.title|striptags|breaking_spaces }}">
+            <meta property="og:title" content="{{ page.title | striptags | breaking_spaces }}">
             <meta property="og:url" content="{{ SITEURL -}} / {{- page.url }}">
             {% if page.image %}
                 <meta property="og:image"
-                    content="{{ SITEURL -}} / {{- page.image|urlencode }}">
+                    content="{{ SITEURL -}} / {{- page.image | urlencode }}">
             {% elif OPEN_GRAPH_IMAGE %}
                 <meta property="og:image" content="{{ SITEURL -}} / {{- OPEN_GRAPH_IMAGE }}">
             {% endif %}
         {% else %}
             <meta property="og:type" content="website">
-            <meta property="og:title" content="{{ SITENAME|striptags|breaking_spaces }}">
+            <meta property="og:title" content="{{ SITENAME | striptags | breaking_spaces }}">
             <meta property="og:url" content="{{ SITEURL }}">
             <meta property="og:description" content="{{ SITENAME }}">
             {% if OPEN_GRAPH_IMAGE %}
                 <meta property="og:image"
-                    content="{{ SITEURL }}/static/{{ OPEN_GRAPH_IMAGE }}">
+                    content="{{ SITEURL -}} /static/ {{- OPEN_GRAPH_IMAGE }}">
             {% endif %}
         {% endif %}
     {% endif -%}
@@ -195,15 +195,20 @@
                         {% if MENUITEMS or DISPLAY_PAGES_ON_MENU or DISPLAY_CATEGORIES_ON_MENU %}
                             <ul class="nav navbar-nav">
                                 {% for title, link, icon in MENUITEMS %}
-                                    <li {% if MENUITEMS_2_AT and title == MENUITEMS_2_AT %}class="active"{% endif %}><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a>
+                                    <li {% if MENUITEMS_2_AT and title == MENUITEMS_2_AT %}class="active"{% endif %}>
+                                        <a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a>
                                     {% if MENUITEMS_2_AT %}
                                         {% if title == MENUITEMS_2_AT %}
                                             <ul class="nav navbar-nav nav-list-level2">
                                             {% if ARCHIVES_SAVE_AS %}
-                                                <li><a href="{{ SITEURL -}} / {{- ARCHIVES_URL | default('archives.html') }}"><span class="fa fa-fw fa-archive"></span> Archives</a></li>
+                                                <li>
+                                                    <a href="{{ SITEURL -}} / {{- ARCHIVES_URL | default('archives.html') }}"><span class="fa fa-fw fa-archive"></span> Archives</a>
+                                                </li>
                                             {% endif %}
                                             {% for title_2, link_2, icon_2 in MENUITEMS_2 %}
-                                                <li><a href="{{ link_2 }}">{% if icon_2 %}<span class="{{icon_2}}"></span> {% endif %}{{ title_2 }}</a></li>
+                                                <li>
+                                                    <a href="{{ link_2 }}">{% if icon_2 %}<span class="{{icon_2}}"></span> {% endif %}{{ title_2 }}</a>
+                                                </li>
                                             {% endfor %}
                                             </ul>
                                         {% endif %}
@@ -212,9 +217,11 @@
                                 {% endfor %}
                                 {% if DISPLAY_PAGES_ON_MENU %}
                                     {% for p in pages | sort(attribute='source_path') %}
-                                        <li{% if p == page %} class="active"{% endif %}><a href="{{ SITEURL -}} / {{- p.url }}">
+                                        <li{% if p == page %} class="active"{% endif %}>
+                                            <a href="{{ SITEURL -}} / {{- p.url }}">
                                             {%- if p.icon %}<span class="{{ p.icon }}"></span> {% endif %}{{- p.menulabel | default(p.title) -}}
-                                        </a></li>
+                                            </a>
+                                        </li>
                                     {% endfor %}
                                 {% endif %}
                                 {% if DISPLAY_CATEGORIES_ON_MENU %}
@@ -239,7 +246,9 @@
                                     </span></li>
                                 {% endif %}
                                 {% if ARCHIVES_SAVE_AS and not MENUITEMS_2_AT %}
-                                    <li><a href="{{ SITEURL -}} / {{- ARCHIVES_URL | default('archives.html') }}"><span class="fa fa-fw fa-archive"></span> Archives</a></li>
+                                    <li>
+                                        <a href="{{ SITEURL -}} / {{- ARCHIVES_URL | default('archives.html') }}"><span class="fa fa-fw fa-archive"></span> Archives</a>
+                                    </li>
                                 {% endif %}
                             </ul>
                         {% endif %}

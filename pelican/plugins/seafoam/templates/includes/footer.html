@@ -85,10 +85,11 @@
             <hr>
             <div class="row">
             {% for title, link, icon in FOOTER_ITEMS %}
-                <!-- {{title}} {{link}} {{icon}} -->
+                {% if SEAFOAM_TEMPLATE_DEBUG -%} <!-- {{title}} {{link}} {{icon}} --> {%- endif %}
                 {% if link.startswith("header") %}
-                    {% set link = link.strip("header") %} <!-- {{ link }}-->
-                        <li class="list-group-item"><h5><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a></h5>
+                    {% set link = link.strip("header") %} {% if SEAFOAM_TEMPLATE_DEBUG -%} <!-- {{ link }}--> {%- endif %}
+                        <li class="list-group-item">
+                            <h5><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a></h5>
                             <ul class="list-group">
                 {% elif link == "end-header" %}
                             </ul>
@@ -98,13 +99,14 @@
                     <ul class="list-group">
                 {% elif link == "end-col" %}
                     </ul>
-                </div>
+                </div> <!-- .col -->
                 {% elif link.startswith("clearfix") %}
-                    <div class="{{ link }}"></div>
+                <div class="{{ link }}"></div>
                 {% elif title == None %}
                     {# pass #}
                 {% else %}
-                        <li class="list-group-item"><a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a>
+                        <li class="list-group-item">
+                            <a href="{{ link }}">{% if icon %}<span class="{{icon}}"></span> {% endif %}{{ title }}</a>
                         </li>
                 {% endif %}
             {% endfor %}
