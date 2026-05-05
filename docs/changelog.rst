@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` allow separate ``CANONICAL_SITEURL`` from ``SITEURL``
 - :bug:`-` hide footer debug comments by default
 - :release:`2.19.0 <2026-05-01>`
 - :bug:`- major` tweak "all posts" link on page with article listing.

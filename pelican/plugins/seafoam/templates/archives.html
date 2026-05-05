@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {# NOTE: Assumes no pagination #}
-{% set CANONICAL_URL = SITEURL + '/' + ARCHIVES_URL %}
+{% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + ARCHIVES_URL %}
 
 {% block title -%}
     Archives &mdash; {{ super() }}

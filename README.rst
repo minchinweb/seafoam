@@ -330,6 +330,12 @@ CC_LICENSE_DERIVATIVES
   "yes" is derivatives are permitted, "no" otherwise. Use this in lieu of
   ``CC_LICENSE`` and in combination with ``CC_LICENSE_COMMERCIAL`` to "build a
   license".
+CANONICAL_SITEURL = SITEURL
+  Used to generate canonical links. Useful if your ``SITEURL`` is protocol-less
+  (e.g. ``//example.com``) but you want your canonical links to have a protocol
+  (e.g. ``https://example.com``).
+
+  See also ``SITEURL``.
 CUSTOM_CSS
   Link, relative to SITEURL, to a custom CSS file.
 CUSTOM_CSS_LIST = []
@@ -785,10 +791,12 @@ SITENAME
   The name of your site, displayed in the navbar.
 SITEURL
   Same as the Pelican setting. Set this to where this Pelican site is actually
-  hosted. Also see the ``SITE_ROOT_URL`` setting.
+  hosted.
+
+  See also ``SITE_ROOT_URL`` and ``CANONICAL_SITEURL``.
 SITE_ROOT_URL = SITEURL
-  Use this if you're hosting a subsite of some sort. This is where the links in
-  logo in the navbar and the home icon in the breadcrumbs will point to. See
+  Use this if you're hosting a sub-site of some sort. This is where the links
+  in logo in the navbar and the home icon in the breadcrumbs will point to. See
   also the ``MENUITEMS_2_AT`` setting.
 SOCIAL
   A list of your social media sites to be listed in the sidebar. Should be a

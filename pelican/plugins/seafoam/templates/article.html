@@ -2,7 +2,8 @@
 {# this is the actual, per article ("post") page #}
 
 {% if not article.disable_canonical_url %}
-    {% set CANONICAL_URL = SITEURL + '/' + article.url %}
+    {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
+    {% set CANONICAL_URL = CANONICAL_SITEURL + '/' + article.url %}
 s{% endif %}
 
 {% block title -%}
