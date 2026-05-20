@@ -874,7 +874,7 @@ accepted, although the theme (or *Pelican*) won't necessarily act on them.
 .. TODO: Add code sample
 
 This documentation has to be manually updated, and this section is still be
-expaned. If the documentation here no longer match the theme's behavior, or a
+expanded. If the documentation here no longer match the theme's behavior, or a
 setting is missing from here, please open a ticket on `GitHub
 <https://github.com/MinchinWeb/seafoam/issues>`_.
 
