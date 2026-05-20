@@ -3,6 +3,7 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :feature:`- minor` add ``GOOGLE_ANALYTICS_V4_2`` to add a second Google tag.
 - :bug:`-` allow separate ``CANONICAL_SITEURL`` from ``SITEURL``
 - :bug:`-` hide footer debug comments by default
 - :release:`2.19.0 <2026-05-01>`

@@ -552,7 +552,10 @@ GOOGLE_ANALYTICS_UNIVERSAL_PROPERTY
   Set this to the Google Analytics "property" this site represents. See also
   (and set) ``GOOGLE_ANALYTICS_UNIVERSAL``.
 GOOGLE_ANALYTICS_V4
-  Set this to your "measurement ID" to activate Google Analytics v4.
+  Set this to your "measurement ID" to activate Google Analytics v4. See also
+  ``GOOGLE_ANALYTICS_V4_2``.
+GOOGLE_ANALYTICS_V4_2
+  If you need to add a second Google tag. See ``GOOGLE_ANALYTICS_V4``.
 GPX_CATEGORY
   Used to process GPX "articles" differently.
 GPX_DEV_URL

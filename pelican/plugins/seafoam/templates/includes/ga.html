@@ -42,3 +42,15 @@
     </script>
     <!-- End Google tag (gtag.js) -->
 {% endif %}
+{% if GOOGLE_ANALYTICS_V4_2 %}
+    <!-- Google tag (gtag.js) -->
+    <script async type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_V4_2 }}"></script>
+    <script type="text/javascript">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', '{{ GOOGLE_ANALYTICS_V4_2 }}');
+    </script>
+    <!-- End Google tag (gtag.js) -->
+{% endif %}
