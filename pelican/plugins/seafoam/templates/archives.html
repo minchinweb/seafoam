@@ -2,7 +2,7 @@
 
 {# NOTE: Assumes no pagination #}
 {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
-{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + ARCHIVES_URL %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + ARCHIVES_URL | default("archives.html") %}
 
 {% block title -%}
     Archives &mdash; {{ super() }}

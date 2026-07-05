@@ -2,7 +2,7 @@
 
 {# NOTE: Assumes no pagination #}
 {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
-{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + TAG_URL.format(slug=tag.slug) %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + (TAG_URL | default("tag/{slug}.html")).format(slug=tag.slug) %}
 
 {% block title -%}
     {{ tag|striptags|breaking_spaces }} &mdash; {{ super() }}

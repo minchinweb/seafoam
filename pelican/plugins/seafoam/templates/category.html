@@ -2,7 +2,7 @@
 
 {# NOTE: Assumes no pagination #}
 {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
-{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + CATEGORY_URL.format(slug=category.slug) %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + (CATEGORY_URL | default("category/{slug}.html")).format(slug=category.slug) %}
 
 {% block title -%}
     {{ category|striptags|breaking_spaces }} &mdash; {{ super() }}

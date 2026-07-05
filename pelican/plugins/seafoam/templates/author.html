@@ -2,7 +2,7 @@
 
 {# NOTE: Assumes no pagination #}
 {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
-{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + AUTHOR_URL.format(slug=author.slug) %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + (AUTHOR_URL | default("author/{slug}.html")).format(slug=author.slug) %}
 
 {% block title -%}
     Articles by {{ author }} &mdash; {{ super() }}

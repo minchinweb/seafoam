@@ -2,7 +2,7 @@
 
 {# NOTE: Assumes no pagination #}
 {% set CANONICAL_SITEURL = SITEURL if not CANONICAL_SITEURL %}
-{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + TAGS_URL %}
+{% set CANONICAL_URL = CANONICAL_SITEURL + '/' + TAGS_URL | default("tags.html") %}
 
 {% block title -%}
     {{ TAGS_TEXT }} &mdash; {{ super() }}

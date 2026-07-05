@@ -3,6 +3,8 @@ Changelog
 
 .. Added, Changed, Depreciated, Removed, Fixed, Security
 
+- :bug:`-` add default canonical URL's to several templates (to allow sites to
+  generate if these URL settings are specified)
 - :release:`2.19.1 <2026-05-19>`
 - :feature:`- minor` add ``GOOGLE_ANALYTICS_V4_2`` to add a second Google tag.
 - :bug:`-` allow separate ``CANONICAL_SITEURL`` from ``SITEURL``
